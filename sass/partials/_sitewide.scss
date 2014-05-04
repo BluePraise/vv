@@ -1,0 +1,151 @@
+.custom-background {
+	background-size: cover;
+	z-index: -999;
+	width: 100%;
+}
+
+#page {
+	overflow: hidden;
+	@include container();
+  padding-top: 20px;
+	@if ($show-grid-backgrounds) {
+  	@include susy-grid-background;
+	}
+	@include at-breakpoint($wide-mobile) {
+    @if ($show-grid-backgrounds) {
+  		@include susy-grid-background;
+		}
+  }
+  @include at-breakpoint($tablet) {
+    @if ($show-grid-backgrounds) {
+  		@include susy-grid-background;
+		}
+  }
+  @include at-breakpoint($desktop) {
+    max-width: 1080px;
+    @include set-container-width;
+    @if ($show-grid-backgrounds) {
+  		@include susy-grid-background;
+		}
+  }
+}
+
+#main {
+  clear: both;
+	overflow: hidden;
+  margin-bottom: 20px;
+	.category-work & {
+		margin-top: 10px;
+	}
+}
+
+.site-footer {
+  border-top: 1px dotted $grey;
+  padding-top: 20px;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.blue {
+  a {
+    color: $blue;
+  }
+  .main-navigation & {
+    border: 2px solid $blue;
+  }
+  &.content {
+    border: 4px $blue solid;
+  }
+  &.content-sidebar {
+    aside {
+      border: 4px $blue solid;
+      background-color: $blue;
+    }
+  }
+}
+
+.orange {
+  a {
+    color: $orange;
+  }
+  .main-navigation & {
+    border: 2px solid $orange;
+  }
+  &.content {
+    border: 4px $orange solid;
+  }
+  &.content-sidebar {
+    aside {
+      border: 4px $orange solid;
+      background-color: $orange;
+    }
+  }
+}
+
+.red {
+  a {
+    color: $red;
+  }
+  .main-navigation & {
+    border: 2px solid $red;
+  }
+  &.content {
+    border: 4px $red solid;
+  }
+  &.content-sidebar {
+    aside {
+      border: 4px $red solid;
+      background-color: $red;
+    }
+  }
+}
+
+.lilac {
+  a {
+    color: $lilac;
+  }
+  .main-navigation & {
+    border: 2px solid $lilac;
+  }
+  &.content {
+    border: 4px $lilac solid;
+  }
+  &.content-sidebar {
+    aside {
+      border: 4px $lilac solid;
+      background-color: $lilac;
+    }
+  }
+}
+.darkgreen {
+  a {
+    color: $darkgreen;
+  }
+  .main-navigation & {
+    border: 2px solid $darkgreen;
+  }
+  &.content {
+    border: 4px $darkgreen solid;
+  }
+  &.content-sidebar {
+    aside {
+      border: 4px $darkgreen solid;
+      background-color: $darkgreen;
+    }
+  }
+}
+
+#comments {
+  // padding: 15px;
+}
+
+.comments-area {
+  border-top: dashed $black 1px;
+}
+
+.edit-link {
+  font-size: 12px;
+  padding: 0 10px;
+}

@@ -1,0 +1,10 @@
+// contains all overrides for plugins.
+%no-fonticons-here {
+	&:before,
+	&:after {
+		content: '';
+		padding: 0;
+		margin: 0;
+	}
+}
+

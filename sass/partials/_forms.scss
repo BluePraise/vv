@@ -1,0 +1,19 @@
+.comment-form {
+  label {
+    // display: none;
+    display: block;
+    padding-bottom: 5px;
+  }
+  input, textarea {
+    @include span-columns(9,9);
+    border: 1px solid grey;
+    @include border-radius(15px 0);
+  }
+  input {
+    height: 35px;
+  }
+  input[type=submit] {
+    width: 200px;
+    background: none;
+  }
+}

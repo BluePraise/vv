@@ -1,0 +1,17 @@
+.content-sidebar {
+  @include span-columns(3,12);
+  aside {
+    @include border-radius(0 15px);
+    margin-bottom: 20px;
+    padding: 10px;
+    h3 {
+      color: $white;
+      margin: 5px 0;
+    }
+    a {
+      color: $white;
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+}

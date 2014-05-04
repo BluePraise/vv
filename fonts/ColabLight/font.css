@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'ColaborateLight';
+  src: url('ColabLig.eot'); /* IE9 Compat Modes */
+  src: url('ColabLig.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ColabLig.woff') format('woff'), /* Modern Browsers */
+       url('ColabLig.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('ColabLig.svg#89962c005adf123c8e91aa80e155a696') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+

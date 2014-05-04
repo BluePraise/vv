@@ -1,0 +1,32 @@
+/*!
+Theme Name: Vitale Verbindingen Theme
+Theme URI: http://mayconnect.org/wordpress
+Author: @omg-its-maggie
+Author URI: http://mayconnect.org/
+Description: A theme for Vitale Verbindingen
+Version: 0.4.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive, blogging, clean, white, mobile
+This theme, like WordPress, is licensed under the GPL.
+*/
+
+@import "compass";
+@import "susy";
+@import "tools/_variables.scss";
+@import "tools/_mixins.scss";
+@import "tools/_normalize.scss";
+@import "tools/_overrides.scss";
+@import "tools/_fonts.scss";
+@import "partials/_base.scss";
+@import "partials/_sitewide.scss";
+@import "partials/_header.scss";
+@import "partials/_sidebar.scss";
+@import "partials/_content.scss";
+@import "partials/_activiteiten.scss";
+@import "partials/_footer.scss";
+@import "partials/_frontpage.scss";
+@import "partials/_temp.scss";
+@import "partials/_forms.scss";
+
+

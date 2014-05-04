@@ -1,0 +1,37 @@
+header {
+  margin-bottom: 20px;
+  float: left;
+}
+
+.logo {
+  @include span-columns(4,12);
+}
+
+h1.site-title {
+  text-indent: -119988px;
+  overflow: hidden;
+  background: url('../images/logo.png') no-repeat;
+  background-position: 50% 50%;
+  height: 180px;
+  margin: 0;
+}
+
+.main-navigation {
+  @include span-columns(6 omega, 12);
+  padding-bottom: 5px;
+  li {
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 5px 10px 5px 0;
+    background-color: $white;
+    @include border-radius(0 15px);
+    &:hover {
+      // background-color:
+    }
+    a {
+      font-weight: bold;
+      font-size: 14px;
+      text-decoration: none;
+    }
+  }
+}

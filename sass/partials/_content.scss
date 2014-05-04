@@ -1,0 +1,32 @@
+.articles {
+  @include span-columns(9 omega,12);
+  @include border-radius(0 15px);
+}
+
+.standard {
+
+}
+
+article {
+  @include border-radius(0 15px);
+  margin-bottom: 20px;
+  h2 {
+    margin: 0;
+    a {
+      color: $black;
+    }
+  }
+  &.blue {
+    border: 4px $blue solid;
+  }
+  &.red {
+    border: 4px $red solid;
+  }
+}
+
+
+.content {
+  .single-post & {
+      padding: 15px;
+    }
+}

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Colaborate-Bold';
+  src: url('ColabBol.eot'); /* IE9 Compat Modes */
+  src: url('ColabBol.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('ColabBol.woff') format('woff'), /* Modern Browsers */
+       url('ColabBol.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('ColabBol.svg#ecb62f582a45431dc8d971a2bf104180') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
