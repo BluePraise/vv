@@ -4,7 +4,7 @@ header {
 }
 
 .logo {
-  @include span-columns(4,12);
+  @include span-columns(3,12);
 }
 
 h1.site-title {

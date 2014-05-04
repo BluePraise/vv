@@ -148,9 +148,10 @@ function vv_sidebar() {
 add_action( 'widgets_init', 'vv_sidebar' );
 
 
-function custom_excerpt_length( $length ) {
-  return 20;
+// Replaces the excerpt "more" text by a link
+function activity_overview_excerpt_more($more) {
+  global $post;
+  return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Lees meer...</a>';
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
+add_filter('excerpt_more', 'activity_overview_excerpt_more');
 ?>

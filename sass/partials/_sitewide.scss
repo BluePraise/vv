@@ -92,11 +92,10 @@
     border: 2px solid $red;
   }
   &.content {
-    border: 4px $red solid;
+    // border: 4px $red solid;
   }
   &.content-sidebar {
     aside {
-      border: 4px $red solid;
       background-color: $red;
     }
   }

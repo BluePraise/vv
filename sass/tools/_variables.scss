@@ -56,13 +56,11 @@ $tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
 $arial:           Arial, Helvetica, sans-serif;
 $lato:            "Lato", Helvetica, sans-serif;
 $treb: 						Trebuchet MS1, Trebuchet MS, sans-serif;
+
 $garamond         : 'EB Garamond', Georgia, serif;
 $colabReg         : 'Colaborate-Regular';
-$colabBold         : 'Colaborate-Bold';
-$colabLight         : 'ColaborateLight';
-
-
-
+$colabBold        : 'Colaborate-Bold';
+$colabLight       : 'ColaborateLight';
 
 // Project-specific fonts
 // Put any font families here that are specific to your project
@@ -156,4 +154,4 @@ $grid-padding           : $gutter-width;
 
 $container-style 				: fluid;
 
-$show-grid-backgrounds  : true;
+$show-grid-backgrounds  : false;

@@ -7,9 +7,10 @@
 
 }
 
-article {
+article, section {
   @include border-radius(0 15px);
   margin-bottom: 20px;
+  padding: 15px;
   h2 {
     margin: 0;
     a {

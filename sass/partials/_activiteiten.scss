@@ -2,4 +2,12 @@
   aside {
     background-color: $white;
   }
+  section, article {
+    border: 4px $red solid;
+  }
+  .three {
+    @include span-columns(3,9);
+    &:nth-child(3n) { @include omega; } // every third image completes a row.
+  }
+
 }

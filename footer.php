@@ -6,7 +6,6 @@
  * #main and #page div elements.
  */
 ?>
-
 	</div><!-- #main -->
 
 
