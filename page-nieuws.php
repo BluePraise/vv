@@ -30,7 +30,8 @@ if ( have_posts() ) :
       </a>
     </div>
     <h2 class="title-on-image"><a href="<?php the_permalink(); ?>" class="title-on-image-link"><?php the_title(); ?></a></h2>
-    <?php if ( ! post_password_required()) :
+      <?php the_excerpt();
+    if ( ! post_password_required()) :
       edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );
     endif; ?>
   </article>

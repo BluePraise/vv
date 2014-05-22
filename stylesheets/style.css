@@ -1090,12 +1090,14 @@ img[class*="align"],
 img[class*="wp-image-"],
 img[class*="attachment-"] {
   height: auto;
+  width: 100%;
 }
 
 img.size-full,
 img.size-large,
 img.wp-post-image {
   height: auto;
+  max-width: 100%;
 }
 
 /* Make sure videos and embeds fit their containers. */
@@ -1427,6 +1429,11 @@ article.red, section.red {
   *margin-left: -20px;
   display: inline;
 }
+.page-template-page-activiteiten-php h2 {
+  border-bottom: dashed 2px black;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
 
 .site-footer {
   clear: both;
@@ -1512,15 +1519,6 @@ article.red, section.red {
   border: 4px #0090bc solid;
 }
 
-.page-template-page-activiteiten-php article {
-  padding: 15px;
-}
-.page-template-page-activiteiten-php h2 {
-  border-bottom: dashed 2px black;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-}
-
 .comment-form label {
   display: block;
   padding-bottom: 5px;
@@ -1543,4 +1541,20 @@ article.red, section.red {
 .comment-form input[type=submit] {
   width: 200px;
   background: none;
+}
+
+.content-single article {
+  padding: 0;
+}
+.content-single.red {
+  border: 4px solid #ed1651;
+}
+
+h2.single-title {
+  border-bottom: dashed 2px black;
+  margin-bottom: 20px;
+}
+
+.single-image {
+  margin-bottom: 20px;
 }

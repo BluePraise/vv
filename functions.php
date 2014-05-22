@@ -71,14 +71,12 @@ function scripts_and_styles() {
 
 add_action('wp_enqueue_scripts', 'scripts_and_styles', 999);
 
-
 // This theme uses a custom image size for featured images, displayed on "standard" posts.
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 624, 9999 ); // Unlimited height, soft crop
+set_post_thumbnail_size( 736, 328  ); // Unlimited height, soft crop
 add_image_size( 'artikel_middle_view', 585, 328 , false );
-add_image_size( 'artikel_large_view', 905, 328 , false );
-// add_image_size( 'portfolio_image_small', 227, 219, false );
-// add_image_size( 'portfolio_image_middle', 330, '', false );
+add_image_size( 'artikel_large_view', 905, 328 , true );
+
 // add_image_size( 'featured_image', 649, 150, true );
 
 

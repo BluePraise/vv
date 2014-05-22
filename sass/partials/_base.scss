@@ -505,13 +505,14 @@ img[class*="align"],
 img[class*="wp-image-"],
 img[class*="attachment-"] {
 	height: auto;
+	width: 100%;
 }
 
 img.size-full,
 img.size-large,
 img.wp-post-image {
 	height: auto;
-	// max-width: 100%;
+	max-width: 100%;
 }
 
 /* Make sure videos and embeds fit their containers. */

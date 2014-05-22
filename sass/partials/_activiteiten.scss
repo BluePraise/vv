@@ -9,5 +9,9 @@
     @include span-columns(3,9);
     &:nth-child(3n) { @include omega; } // every third image completes a row.
   }
-
+  h2 {
+    border-bottom: dashed 2px black;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
 }
