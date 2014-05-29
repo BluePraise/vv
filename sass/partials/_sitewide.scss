@@ -54,6 +54,9 @@
   }
   .main-navigation & {
     border: 2px solid $blue;
+    &:hover {
+      background-color: $blue;
+    }
   }
   &.content {
     border: 4px $blue solid;
@@ -72,6 +75,9 @@
   }
   .main-navigation & {
     border: 2px solid $orange;
+    &:hover {
+      background-color: $orange;
+    }
   }
   &.content {
     border: 4px $orange solid;
@@ -90,6 +96,9 @@
   }
   .main-navigation & {
     border: 2px solid $red;
+    &:hover {
+      background-color: $red;
+    }
   }
   &.content {
     // border: 4px $red solid;
@@ -107,6 +116,9 @@
   }
   .main-navigation & {
     border: 2px solid $lilac;
+    &:hover {
+      background-color: $lilac;
+    }
   }
   &.content {
     border: 4px $lilac solid;
@@ -124,6 +136,9 @@
   }
   .main-navigation & {
     border: 2px solid $darkgreen;
+    &:hover {
+      background-color: $darkgreen;
+    }
   }
   &.content {
     border: 4px $darkgreen solid;

@@ -21,14 +21,17 @@ h1.site-title {
   padding-bottom: 5px;
   li {
     display: inline-block;
-    padding: 8px 10px;
     margin: 5px 10px 5px 0;
     background-color: $white;
     @include border-radius(0 15px);
     &:hover {
-      // background-color:
+      a {
+        color: $white;
+      }
     }
     a {
+      display: inline-block;
+      padding: 8px 10px;
       font-weight: bold;
       font-size: 14px;
       text-decoration: none;

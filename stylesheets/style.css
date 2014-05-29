@@ -846,6 +846,7 @@ nav ol {
 li > ul,
 li > ol {
   margin: 0;
+  padding: 0;
 }
 
 img {
@@ -1227,6 +1228,9 @@ img.wp-smiley,
 .main-navigation .blue {
   border: 2px solid #0090bc;
 }
+.main-navigation .blue:hover {
+  background-color: #0090bc;
+}
 .blue.content {
   border: 4px #0090bc solid;
 }
@@ -1240,6 +1244,9 @@ img.wp-smiley,
 }
 .main-navigation .orange {
   border: 2px solid #faa41a;
+}
+.main-navigation .orange:hover {
+  background-color: #faa41a;
 }
 .orange.content {
   border: 4px #faa41a solid;
@@ -1255,6 +1262,9 @@ img.wp-smiley,
 .main-navigation .red {
   border: 2px solid #ed1651;
 }
+.main-navigation .red:hover {
+  background-color: #ed1651;
+}
 .red.content-sidebar aside {
   background-color: #ed1651;
 }
@@ -1264,6 +1274,9 @@ img.wp-smiley,
 }
 .main-navigation .lilac {
   border: 2px solid #6f83c1;
+}
+.main-navigation .lilac:hover {
+  background-color: #6f83c1;
 }
 .lilac.content {
   border: 4px #6f83c1 solid;
@@ -1278,6 +1291,9 @@ img.wp-smiley,
 }
 .main-navigation .darkgreen {
   border: 2px solid #16585d;
+}
+.main-navigation .darkgreen:hover {
+  background-color: #16585d;
 }
 .darkgreen.content {
   border: 4px #16585d solid;
@@ -1327,7 +1343,6 @@ h1.site-title a.logo {
 }
 .main-navigation li {
   display: inline-block;
-  padding: 8px 10px;
   margin: 5px 10px 5px 0;
   background-color: white;
   -webkit-border-radius: 0 15px;
@@ -1336,7 +1351,12 @@ h1.site-title a.logo {
   -o-border-radius: 0 15px;
   border-radius: 0 15px;
 }
+.main-navigation li:hover a {
+  color: white;
+}
 .main-navigation li a {
+  display: inline-block;
+  padding: 8px 10px;
   font-weight: bold;
   font-size: 14px;
   text-decoration: none;
