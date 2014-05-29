@@ -1,19 +1,87 @@
-.comment-form {
-  label {
-    // display: none;
-    display: block;
-    padding-bottom: 5px;
+/**
+* Form elements: Inputs, buttons, etc.
+*/
+
+form {
+}
+
+fieldset {
+}
+
+legend {
+}
+
+
+label,
+input,
+button,
+select,
+textarea {
+
+}
+
+input,
+button,
+select,
+textarea {
+  //font-family: $form-font-family; // And only set font-family here for those that need it (note the missing label element)
+  border: 2px solid $grey-light;
+  box-shadow: none;
+  height: 35px;
+}
+
+label {
+  display: inline-block;
+  padding-bottom: 5px;
+  @include span-columns(3,12);
+
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: block;
+  width: 200px;
+  background: none;
+  @include border-radius(15px 0);
+  &:hover,
+  &:active {
+    @include transition-property(backround-color);
+    @include transition-duration(0.2s);
+    @include transition-timing-function(ease);
+    background-color: $mainColor;
+    color: $white;
   }
-  input, textarea {
-    @include span-columns(9,9);
-    border: 1px solid grey;
-    @include border-radius(15px 0);
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  // @include span-columns(4,12);
+  @include border-radius(15px 0);
+  display: inline-block;
+  &:focus {
   }
-  input {
-    height: 35px;
-  }
-  input[type=submit] {
-    width: 200px;
-    background: none;
+}
+
+input[type="checkbox"] {
+
+}
+.wpcf7 {
+  @include span-columns(9 omega,12);
+}
+
+.form-item {
+  margin-bottom: 20px;
+  span.wpcf7-form-control-wrap {
+    display: inline-block;
   }
 }

@@ -546,7 +546,7 @@ dd {
   font-family: 'Colaborate-Regular';
   src: url("../fonts/ColabReg/ColabReg.eot");
   /* IE9 Compat Modes */
-  src: url("../fonts/ColabReg/ColabReg.eot?#iefix") format("embedded-opentype"), url("../fonts/ColabReg/ColabReg.woff") format("woff"), url("../fonts/ColabReg/ColabReg.ttf") format("truetype"), url("../fonts/ColabReg/ColabReg.svg#094ab4d2128a2af47d60858829d26a8c") format("svg");
+  src: url("../fonts/ColabReg/ColabReg.eot?#iefix") format("embedded-opentype"), url("../fonts/ColabReg/ColabReg.woff") format("woff"), url("../fonts/ColabReg/ColabReg.ttf") format("truetype"), url("../fonts/ColabReg/ColabReg.svg#ColabReg") format("svg");
   /* Legacy iOS */
   font-style: normal;
   font-weight: 400;
@@ -556,17 +556,17 @@ dd {
   font-family: 'Colaborate-Bold';
   src: url("../fonts/ColabBold/ColabBol.eot");
   /* IE9 Compat Modes */
-  src: url("../fonts/ColabBold/ColabBol.eot?#iefix") format("embedded-opentype"), url("../fonts/ColabBold/ColabBol.woff") format("woff"), url("../fonts/ColabBold/ColabBol.ttf") format("truetype"), url("../fonts/ColabBold/ColabBol.svg#ecb62f582a45431dc8d971a2bf104180") format("svg");
+  src: url("../fonts/ColabBold/ColabBol.eot?#iefix") format("embedded-opentype"), url("../fonts/ColabBold/ColabBol.woff") format("woff"), url("../fonts/ColabBold/ColabBol.ttf") format("truetype"), url("../fonts/ColabBold/ColabBol.svg#ColabBol") format("svg");
   /* Legacy iOS */
   font-style: normal;
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'ColaborateLight';
+  font-family: 'Colaborate-Light';
   src: url("../fonts/ColabLight/ColabLig.eot");
   /* IE9 Compat Modes */
-  src: url("../fonts/ColabLight/ColabLig.eot?#iefix") format("embedded-opentype"), url("../fonts/ColabLight/ColabLig.woff") format("woff"), url("../fonts/ColabLight/ColabLig.ttf") format("truetype"), url("../fonts/ColabLight/ColabLig.svg#89962c005adf123c8e91aa80e155a696") format("svg");
+  src: url("../fonts/ColabLight/ColabLig.eot?#iefix") format("embedded-opentype"), url("../fonts/ColabLight/ColabLig.woff") format("woff"), url("../fonts/ColabLight/ColabLig.ttf") format("truetype"), url("../fonts/ColabLight/ColabLig.svg#ColabLig") format("svg");
   /* Legacy iOS */
   font-style: normal;
   font-weight: 200;
@@ -605,7 +605,7 @@ textarea {
 }
 
 body {
-  font-family: "ColaborateLight";
+  font-family: "Colaborate-Light";
   color: #000;
   font-size: 18px;
   background-color: #fff;
@@ -652,7 +652,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Colaborate-Bold";
+  font-family: "Colaborate-Light";
   color: black;
   clear: both;
 }
@@ -1461,6 +1461,13 @@ article.red, section.red {
   color: #fff;
 }
 
+.page-template-page-php .content {
+  width: 100%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
 .post-1742 img {
   width: 100%;
   height: 250px;
@@ -1539,28 +1546,96 @@ article.red, section.red {
   border: 4px #0090bc solid;
 }
 
-.comment-form label {
-  display: block;
-  padding-bottom: 5px;
+/**
+* Form elements: Inputs, buttons, etc.
+*/
+input,
+button,
+select,
+textarea {
+  border: 2px solid #f0f0f0;
+  box-shadow: none;
+  height: 35px;
 }
-.comment-form input, .comment-form textarea {
-  width: 100%;
+
+label {
+  display: inline-block;
+  padding-bottom: 5px;
+  width: 23.40426%;
   float: left;
-  margin-right: 2.85714%;
+  margin-right: 2.12766%;
   display: inline;
-  border: 1px solid grey;
+}
+
+textarea {
+  min-height: 150px;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  display: block;
+  width: 200px;
+  background: none;
   -webkit-border-radius: 15px 0;
   -moz-border-radius: 15px 0;
   -ms-border-radius: 15px 0;
   -o-border-radius: 15px 0;
   border-radius: 15px 0;
 }
-.comment-form input {
-  height: 35px;
+.button:hover, .button:active,
+button:hover,
+button:active,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="button"]:hover,
+input[type="button"]:active {
+  -webkit-transition-property: backround-color;
+  -moz-transition-property: backround-color;
+  -o-transition-property: backround-color;
+  transition-property: backround-color;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background-color: black;
+  color: white;
 }
-.comment-form input[type=submit] {
-  width: 200px;
-  background: none;
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  -webkit-border-radius: 15px 0;
+  -moz-border-radius: 15px 0;
+  -ms-border-radius: 15px 0;
+  -o-border-radius: 15px 0;
+  border-radius: 15px 0;
+  display: inline-block;
+}
+
+.wpcf7 {
+  width: 74.46809%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+.form-item {
+  margin-bottom: 20px;
+}
+.form-item span.wpcf7-form-control-wrap {
+  display: inline-block;
 }
 
 .content-single article {
