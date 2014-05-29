@@ -3,17 +3,17 @@ header {
   float: left;
 }
 
-.logo {
-  @include span-columns(3,12);
-}
-
 h1.site-title {
+  @include span-columns(3,12);
   text-indent: -119988px;
   overflow: hidden;
-  background: url('../images/logo.png') no-repeat;
-  background-position: 50% 50%;
-  height: 180px;
   margin: 0;
+  a.logo {
+    display: block;
+    background: image-url('logo.png') no-repeat;
+    background-position: 50% 50%;
+    height: 180px;
+  }
 }
 
 .main-navigation {

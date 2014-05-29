@@ -33,7 +33,9 @@
 		<div id="page" class="hfeed">
 
 			<header role="banner">
-				<h1 class="site-title logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Vitale Verbindingen</a></h1>
+				<h1 class="site-title">
+					<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Vitale Verbindingen</a>
+				</h1>
 				<nav class="main-navigation" role="navigation">
 					<?php vv_menu(); ?>
 				</nav><!-- #site-navigation -->

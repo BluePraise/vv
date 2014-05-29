@@ -1301,20 +1301,20 @@ header {
   float: left;
 }
 
-.logo {
+h1.site-title {
   width: 23.40426%;
   float: left;
   margin-right: 2.12766%;
   display: inline;
-}
-
-h1.site-title {
   text-indent: -119988px;
   overflow: hidden;
-  background: url("../images/logo.png") no-repeat;
+  margin: 0;
+}
+h1.site-title a.logo {
+  display: block;
+  background: url('../images/logo.png?1395739709') no-repeat;
   background-position: 50% 50%;
   height: 180px;
-  margin: 0;
 }
 
 .main-navigation {
