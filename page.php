@@ -7,6 +7,12 @@ get_header();
 
 ?>
 
+<div class="content-sidebar orange widget-area" role="complementary">
+    <?php dynamic_sidebar( 'sidebar-activity-page' ); ?>
+</div><!-- #content-sidebar -->
+
+
+
 <div class="content orange standard">
   <article>
 

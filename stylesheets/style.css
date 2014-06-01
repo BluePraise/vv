@@ -1312,7 +1312,12 @@ img.wp-smiley,
   padding: 0 10px;
 }
 
+.invisible {
+  display: none !important;
+}
+
 header {
+  width: 100%;
   margin-bottom: 20px;
   float: left;
 }
@@ -1334,7 +1339,7 @@ h1.site-title a.logo {
 }
 
 .main-navigation {
-  width: 48.93617%;
+  width: 40.42553%;
   float: right;
   margin-right: 0;
   *margin-left: -20px;
@@ -1462,9 +1467,10 @@ article.red, section.red {
 }
 
 .page-template-page-php .content {
-  width: 100%;
-  float: left;
-  margin-right: 2.12766%;
+  width: 74.46809%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
   display: inline;
 }
 
@@ -1606,7 +1612,6 @@ input[type="button"]:active {
   -moz-transition-timing-function: ease;
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
-  background-color: black;
   color: white;
 }
 
@@ -1624,11 +1629,9 @@ select {
 }
 
 .wpcf7 {
-  width: 74.46809%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -20px;
-  display: inline;
+  border-top: dashed #FFA500 2px;
+  padding-top: 30px !important;
+  margin-top: 30px !important;
 }
 
 .form-item {
@@ -1636,6 +1639,14 @@ select {
 }
 .form-item span.wpcf7-form-control-wrap {
   display: inline-block;
+}
+
+.form-item-submit {
+  padding-left: 333px;
+}
+
+.wpcf7-submit:hover {
+  background-color: #faa41a;
 }
 
 .content-single article {

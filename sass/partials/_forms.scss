@@ -55,7 +55,6 @@ input[type="button"] {
     @include transition-property(backround-color);
     @include transition-duration(0.2s);
     @include transition-timing-function(ease);
-    background-color: $mainColor;
     color: $white;
   }
 }
@@ -65,7 +64,6 @@ input[type="password"],
 input[type="email"],
 textarea,
 select {
-  // @include span-columns(4,12);
   @include border-radius(15px 0);
   display: inline-block;
   &:focus {
@@ -76,12 +74,23 @@ input[type="checkbox"] {
 
 }
 .wpcf7 {
-  @include span-columns(9 omega,12);
+  border-top: dashed #FFA500 2px;
+  padding-top: 30px !important;
+  margin-top: 30px !important;
 }
 
 .form-item {
   margin-bottom: 20px;
   span.wpcf7-form-control-wrap {
     display: inline-block;
+  }
+}
+
+.form-item-submit {
+  padding-left: 333px;
+}
+.wpcf7-submit {
+  &:hover {
+    background-color: $orange;
   }
 }

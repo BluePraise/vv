@@ -1,4 +1,5 @@
 header {
+  width: 100%;
   margin-bottom: 20px;
   float: left;
 }
@@ -17,7 +18,7 @@ h1.site-title {
 }
 
 .main-navigation {
-  @include span-columns(6 omega, 12);
+  @include span-columns(5 omega, 12);
   padding-bottom: 5px;
   li {
     display: inline-block;
