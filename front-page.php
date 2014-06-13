@@ -16,11 +16,10 @@ get_header();
 
 ?>
 
-
 <aside class="pagelink-block">
-  <div class="pagelink darkgreen blog">Vitale Verbindingen Blogt</div>
-  <div class="pagelink aquagreen">Vitale Verbindingen Blogt</div>
-  <div class="pagelink lilac">Zet ons in!</div>
+  <div class="pagelink darkgreen blog"><a href="#">Vitale Verbindingen Blogt</a></div>
+  <div class="pagelink aquagreen"><a href="#">Vitale Verbindingen Blogt</a></div>
+  <div class="pagelink lilac"><a href="/zet-ons-in/">Zet ons in!</a></div>
 </aside>
 
 <?php

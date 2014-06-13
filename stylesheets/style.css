@@ -1498,9 +1498,17 @@ article.activity {
   line-height: 44px;
   font-size: 1.6rem;
   line-height: 4.4rem;
-  color: white;
+  -webkit-border-radius: 0 15px;
+  -moz-border-radius: 0 15px;
+  -ms-border-radius: 0 15px;
+  -o-border-radius: 0 15px;
+  border-radius: 0 15px;
+  margin-bottom: 15px;
   font-weight: bold;
-  padding: 0 0.3em;
+  padding: 0 1em;
+}
+.pagelink a {
+  color: white;
 }
 .pagelink.darkgreen {
   background-color: #16585d;

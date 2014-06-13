@@ -3,9 +3,13 @@
 }
 .pagelink {
   @include font-size(16,44);
-  color: white;
+  @include border-radius(0 15px);
+  margin-bottom: 15px;
   font-weight: bold;
-  padding: 0 0.3em;
+  padding: 0 1em;
+  a {
+    color: white;
+  }
   &.darkgreen {
     background-color: $darkgreen;
   }
