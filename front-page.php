@@ -5,6 +5,18 @@
 get_header();
 
 ?>
+
+<?php
+
+  if ( have_posts() ) : while ( have_posts() ) : the_post();
+  echo do_shortcode("[metaslider id=1843]");
+  endwhile;
+  wp_reset_query();
+  endif;
+
+?>
+
+
 <aside class="pagelink-block">
   <div class="pagelink darkgreen blog">Vitale Verbindingen Blogt</div>
   <div class="pagelink aquagreen">Vitale Verbindingen Blogt</div>

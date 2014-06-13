@@ -1,0 +1,26 @@
+.metaslider {
+  margin-bottom: 30px;
+  border: 4px $orange solid;
+  @include border-radius(0 15px);
+}
+.flexslider {
+  position: relative;
+  .flex-viewport {
+    height: 333px;
+  }
+}
+.slides {
+  li img {
+    @include border-radius(0 15px);
+  }
+}
+
+ol.flex-control-paging {
+  position: absolute;
+  z-index: 9;
+  bottom: 50px;
+  left: 400px
+  li a {
+    background: $orange;
+  }
+}

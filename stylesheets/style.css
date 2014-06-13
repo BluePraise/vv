@@ -1702,6 +1702,39 @@ select {
   background-color: #faa41a;
 }
 
+.metaslider {
+  margin-bottom: 30px;
+  border: 4px #faa41a solid;
+  -webkit-border-radius: 0 15px;
+  -moz-border-radius: 0 15px;
+  -ms-border-radius: 0 15px;
+  -o-border-radius: 0 15px;
+  border-radius: 0 15px;
+}
+
+.flexslider {
+  position: relative;
+}
+.flexslider .flex-viewport {
+  height: 333px;
+}
+
+.slides li img {
+  -webkit-border-radius: 0 15px;
+  -moz-border-radius: 0 15px;
+  -ms-border-radius: 0 15px;
+  -o-border-radius: 0 15px;
+  border-radius: 0 15px;
+}
+
+ol.flex-control-paging {
+  position: absolute;
+  z-index: 9;
+  bottom: 50px;
+  left: 400px li a;
+  left-background: #faa41a;
+}
+
 .content-single article {
   padding: 0;
 }
