@@ -35,9 +35,9 @@ get_header();
         // The loop.
         if ( have_posts() ) :
           while ( have_posts() ) : the_post();?>
-            <article class="three">
+            <article class="activity-overview activity">
               <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                <? the_content();
+                <?php the_content();
 
               if ( ! post_password_required()) :
                 edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );

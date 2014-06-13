@@ -2,16 +2,24 @@
   aside {
     background-color: $white;
   }
-  section, article {
+  section {
     border: 4px $red solid;
   }
-  .three {
+  .activity-overview {
     @include span-columns(3,9);
     &:nth-child(3n) { @include omega; } // every third image completes a row.
+    max-height: 275px;
+    overflow: hidden;
   }
   h2 {
     border-bottom: dashed 2px black;
     margin-bottom: 20px;
     padding-bottom: 10px;
   }
+}
+
+article.activity {
+  border: 4px $red solid;
+  max-height: 275px;
+  overflow: hidden;
 }

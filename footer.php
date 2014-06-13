@@ -9,10 +9,9 @@
 	</div><!-- #main -->
 
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="colophon" class="site-footer purple" role="contentinfo">
 				<div class="footer-info">
-					<span>Copyright MayConnect <?php echo date('Y'); ?>.</span>
-					<p>Built with <a class="genericon-wordpress" href="http://www.wordpress.org"></a></p>
+					<span>Alle Rechten Voorbehouden aan Vitale Verbindingen <?php echo date('Y'); ?>.</span>
 				</div> <!--end footerinfo -->
 
 		</footer><!-- #colophon -->

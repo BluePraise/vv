@@ -1,5 +1,9 @@
 .site-footer {
 	clear: both;
-	background-color: #000;
+  font-family: $colabReg;
+	background-color: $purple;
 	color: #fff;
+  @include font-size(16,22);
+  padding: 25px;
+  min-height: 175px;
 }

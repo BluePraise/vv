@@ -1,0 +1,21 @@
+.pagelink-block {
+  @include span-columns(3,12);
+}
+.pagelink {
+  @include font-size(16,44);
+  color: white;
+  font-weight: bold;
+  padding: 0 0.3em;
+  &.darkgreen {
+    background-color: $darkgreen;
+  }
+  &.aquagreen {
+    background-color: $aquaGreen
+  }
+  &.lilac {
+    background-color: $lilac;
+  }
+}
+article.activity {
+  @include span-columns(3,12);
+}

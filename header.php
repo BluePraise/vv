@@ -21,8 +21,8 @@
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="http://i.icomoon.io/public/temp/42ecfaa665/classy/style.css">
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300,600' rel='stylesheet' type='text/css'> -->
+	<!-- <link rel="stylesheet" href="http://i.icomoon.io/public/temp/42ecfaa665/classy/style.css"> -->
 
 	<?php wp_head(); ?>
 

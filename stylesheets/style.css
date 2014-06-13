@@ -593,6 +593,11 @@ dd {
 html {
   overflow-y: scroll;
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 html,
@@ -1439,16 +1444,18 @@ article.red, section.red {
 .page-template-page-activiteiten-php aside {
   background-color: white;
 }
-.page-template-page-activiteiten-php section, .page-template-page-activiteiten-php article {
+.page-template-page-activiteiten-php section {
   border: 4px #ed1651 solid;
 }
-.page-template-page-activiteiten-php .three {
+.page-template-page-activiteiten-php .activity-overview {
   width: 31.42857%;
   float: left;
   margin-right: 2.85714%;
   display: inline;
+  max-height: 275px;
+  overflow: hidden;
 }
-.page-template-page-activiteiten-php .three:nth-child(3n) {
+.page-template-page-activiteiten-php .activity-overview:nth-child(3n) {
   float: right;
   margin-right: 0;
   *margin-left: -20px;
@@ -1460,10 +1467,56 @@ article.red, section.red {
   padding-bottom: 10px;
 }
 
+article.activity {
+  border: 4px #ed1651 solid;
+  max-height: 275px;
+  overflow: hidden;
+}
+
 .site-footer {
   clear: both;
-  background-color: #000;
+  font-family: "Colaborate-Regular";
+  background-color: #973696;
   color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  padding: 25px;
+  min-height: 175px;
+}
+
+.pagelink-block {
+  width: 23.40426%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.pagelink {
+  font-size: 16px;
+  line-height: 44px;
+  font-size: 1.6rem;
+  line-height: 4.4rem;
+  color: white;
+  font-weight: bold;
+  padding: 0 0.3em;
+}
+.pagelink.darkgreen {
+  background-color: #16585d;
+}
+.pagelink.aquagreen {
+  background-color: #67c6b4;
+}
+.pagelink.lilac {
+  background-color: #6f83c1;
+}
+
+article.activity {
+  width: 23.40426%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
 }
 
 .page-template-page-php .content {
