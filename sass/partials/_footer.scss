@@ -7,3 +7,19 @@
   padding: 25px;
   min-height: 175px;
 }
+
+.sitemap,
+.address-stuff {
+  @include span-columns(4 , 12);
+}
+
+.legal-stuff {
+  @include span-columns(4 omega, 12);
+}
+
+.footer-info {
+  h3 {
+    color: $white;
+    margin: 0;
+  }
+}

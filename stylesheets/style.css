@@ -1441,7 +1441,7 @@ article.red, section.red {
   padding: 15px;
 }
 
-.page-template-page-activiteiten-php aside {
+.page-template-page-activiteiten-php > aside {
   background-color: white;
 }
 .page-template-page-activiteiten-php section {
@@ -1484,6 +1484,27 @@ article.activity {
   line-height: 2.2rem;
   padding: 25px;
   min-height: 175px;
+}
+
+.sitemap,
+.address-stuff {
+  width: 31.91489%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+
+.legal-stuff {
+  width: 31.91489%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+}
+
+.footer-info h3 {
+  color: white;
+  margin: 0;
 }
 
 .pagelink-block {
