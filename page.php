@@ -11,22 +11,18 @@ get_header();
     <?php dynamic_sidebar( 'sidebar-activity-page' ); ?>
 </div><!-- #content-sidebar -->
 
+<div class="content standard">
+  <h1 class="pagetitle orange"><?php the_title(); ?></h1>
+  <article class="page-article">
 
-
-<div class="content orange standard">
-  <article>
-
-<?php
-if ( have_posts() ) :
-  while ( have_posts() ) :
-    the_post();
-  ?>
   <?php
-    the_content();
-  endwhile;
-?>
+  if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-</article>
+    the_content();
+    endwhile;
+  ?>
+
+  </article>
 </div> <!-- end of contentclass -->
 
 <?php

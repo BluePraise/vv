@@ -16,13 +16,22 @@ get_header();
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-  <h2 class="h1 single-title single-activity-title"><?php the_title(); ?></h2>
+  <h2 class="h1 page-title single-activity-title"><?php the_title(); ?></h2>
 
       <div class="single-image single-activity-image">
         <?php
           if ( has_post_thumbnail() ) {
             the_post_thumbnail('artikel_middle_view');
           }?>
+      </div>
+      <div class="activity-info activity-date">
+        <div class="activity-label">Datum:</div>
+        <div class="activity-start-date the-date"> <span>van:</span> <?php the_field('begintijd') ?> </div>
+        <div class="activity-end-date the-date"> <span>tot:</span> <?php the_field('eindtijd') ?> </div>
+      </div>
+      <div class="activity-info activity-persons">
+        <div class="activity-label">Wie:</div>
+        <div class="activity-person"><?php the_field('activiteiten_persoon') ?> </div>
       </div>
       <?php the_content();
 

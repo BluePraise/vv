@@ -71,8 +71,9 @@ $colabLight       : 'Colaborate-Light';
 $courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family:   $colabLight; // The font family set on the html element.
+$base-font-family:   sans-serif; // The font family set on the html element.
 $font-body:          $colabReg;
+$header-font:        $colabReg;
 //$font-monospace:   $courier;
 //$form-font-family: $istok;
 

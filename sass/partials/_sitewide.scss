@@ -33,6 +33,7 @@
 #main {
   clear: both;
 	overflow: hidden;
+  @include font-size();
   margin-bottom: 20px;
 	.category-work & {
 		margin-top: 10px;
@@ -46,6 +47,31 @@
 
 .sub-menu {
   display: none;
+}
+
+.pagetitle {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: bold;
+  a {
+    color: white;
+  }
+  &.darkgreen {
+    background-color: $darkgreen;
+  }
+  &.aquagreen {
+    background-color: $aquaGreen
+  }
+  &.lilac {
+    background-color: $lilac;
+  }
+  &.red {
+    background-color: $red;
+  }
+  &.orange {
+    color: $orange;
+    border-bottom: 4px solid;
+  }
 }
 
 .blue {
@@ -157,8 +183,17 @@
 }
 
 .edit-link {
-  font-size: 12px;
+  @include font-size(14,14);
   padding: 0 10px;
+  a {
+    color: black;
+  }
+  &:before {
+    display: inline-block;
+    font-family: 'icomoon';
+    content: "\e601";
+    margin-right: 10px;
+  }
 }
 
 .invisible {

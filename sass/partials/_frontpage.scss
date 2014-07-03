@@ -1,6 +1,35 @@
+section.front {
+  padding: 0;
+}
+
 .pagelink-block {
   @include span-columns(3,12);
 }
+.activiteiten {
+  @include span-columns(3,12);
+  .activity-item {
+    margin-bottom: 10px;
+  }
+  .activity-item-title {
+    color: white;
+    font-weight: bold;
+    @include font-size(14, 14);
+  }
+  .the-date {
+    display: inline;
+    @include font-size(12, 14);
+  }
+}
+
+.specials {
+  @include span-columns(6 omega ,12);
+  .section-header {
+    a {
+      color: $white;
+    }
+  }
+}
+
 .pagelink {
   @include font-size(16,44);
   @include border-radius(0 15px);
@@ -19,7 +48,30 @@
   &.lilac {
     background-color: $lilac;
   }
+  &.red {
+    background-color: $red;
+  }
 }
-article.activity {
-  @include span-columns(3,12);
+
+.section-header {
+  @include font-size(16,44);
+  @include border-radius(0 15px);
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding: 0 1em;
+  color: $white;
+  &.red {
+    background-color: $red;
+  }
+  &.orange {
+    background-color: $orange;
+  }
+}
+
+.activity-list {
+  @include border-radius(0 15px);
+  padding: 10px;
+  &.red {
+    background-color: $red;
+  }
 }
