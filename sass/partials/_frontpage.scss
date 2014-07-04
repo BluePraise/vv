@@ -1,15 +1,23 @@
 section.front {
   padding: 0;
+  a {
+    color: $white;
+    font-weight: bold;
+  }
 }
 
+.front-sidebar {
+  @include span-columns(4);
+  margin-bottom: 50px;
+  @include at-breakpoint($desktop) {
+    margin-bottom: 0;
+    @include span-columns(3,12);
+  }
+}
 .pagelink-block {
-  @include span-columns(3,12);
+  margin-bottom: 50px;
 }
 .activiteiten {
-  @include span-columns(3,12);
-  .activity-item {
-    margin-bottom: 10px;
-  }
   .activity-item-title {
     color: white;
     font-weight: bold;
@@ -21,11 +29,38 @@ section.front {
   }
 }
 
-.specials {
-  @include span-columns(6 omega ,12);
-  .section-header {
-    a {
-      color: $white;
+.activity-item {
+  margin-bottom: 10px;
+}
+.activity-list {
+  @include border-radius(0 15px);
+  padding: 10px;
+  &.red {
+    background-color: $red;
+  }
+  a {
+    @include font-size(14, 14);
+  }
+}
+
+.events {
+  @include span-columns(4);
+  @include at-breakpoint($desktop) {
+    @include span-columns(9 omega ,12);
+  }
+}
+.events-list {
+  background-color: $orange;
+  &.left {
+    margin-bottom: 20px;
+    @include at-breakpoint($desktop) {
+      @include span-columns(3,6);
+      margin-bottom: 0px;
+    }
+  }
+  &.right {
+    @include at-breakpoint($desktop) {
+      @include span-columns(3 omega, 6);
     }
   }
 }
@@ -33,9 +68,9 @@ section.front {
 .pagelink {
   @include font-size(16,44);
   @include border-radius(0 15px);
-  margin-bottom: 15px;
-  font-weight: bold;
+  margin-bottom: 10px;
   padding: 0 1em;
+  font-weight: bold;
   a {
     color: white;
   }
@@ -56,7 +91,7 @@ section.front {
 .section-header {
   @include font-size(16,44);
   @include border-radius(0 15px);
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   font-weight: bold;
   padding: 0 1em;
   color: $white;
@@ -65,13 +100,5 @@ section.front {
   }
   &.orange {
     background-color: $orange;
-  }
-}
-
-.activity-list {
-  @include border-radius(0 15px);
-  padding: 10px;
-  &.red {
-    background-color: $red;
   }
 }
