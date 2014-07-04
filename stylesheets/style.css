@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
 /*!
 Theme Name: Vitale Verbindingen Theme
 Theme URI: http://mayconnect.org/wordpress
@@ -737,12 +738,18 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 18px;
+  font-size: 32px;
+  line-height: 32px;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
   margin: 25px 0;
 }
 
 h3, .h3 {
-  font-size: 22px;
+  font-size: 28px;
+  line-height: 28px;
+  font-size: 2.8rem;
+  line-height: 2.8rem;
   margin: 22px 0;
 }
 
@@ -786,8 +793,6 @@ mark {
 
 p {
   margin: 0 0 10px;
-  font-size: 16px;
-  line-height: 21px;
 }
 
 code,
@@ -1282,10 +1287,10 @@ img.wp-smiley,
 #main {
   clear: both;
   overflow: hidden;
-  font-size: 12px;
-  line-height: 18px;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 14pxpx;
+  line-height: 22pxpx;
+  font-size: 1.4pxrem;
+  line-height: 2.2pxrem;
   margin-bottom: 20px;
 }
 .category-work #main {
@@ -1629,36 +1634,52 @@ article.activity {
 
 .site-footer {
   clear: both;
-  font-family: "Colaborate-Regular";
+  -webkit-border-radius: 15px 15px 0 0;
+  -moz-border-radius: 15px 15px 0 0;
+  -ms-border-radius: 15px 15px 0 0;
+  -o-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0;
   background-color: #973696;
+  font-weight: bold;
   color: #fff;
-  font-size: 16px;
-  line-height: 22px;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-  padding: 25px;
-  min-height: 175px;
+  padding: 1em;
+  min-height: 200px;
 }
 
 .sitemap,
 .address-stuff {
-  width: 31.91489%;
+  width: 23.40426%;
   float: left;
   margin-right: 2.12766%;
   display: inline;
 }
 
+.copyright {
+  width: 100%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+}
+.copyright span {
+  display: block;
+  text-align: right;
+}
+
 .legal-stuff {
-  width: 31.91489%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -20px;
+  width: 23.40426%;
+  float: left;
+  margin-right: 2.12766%;
   display: inline;
 }
 
 .footer-info h3 {
   color: white;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.magalielinda {
+  font-family: 'Oswald', sans-serif;
 }
 
 section.front {
@@ -1717,6 +1738,9 @@ section.front a {
   border-radius: 0 15px;
   padding: 10px;
 }
+.activity-list li:last {
+  margin-bottom: 0;
+}
 .activity-list.red {
   background-color: #ed1651;
 }
@@ -1740,15 +1764,11 @@ section.front a {
     margin-right: 0;
   }
 }
-
-.events-list {
-  background-color: #faa41a;
-}
-.events-list.left {
+.events .event.left {
   margin-bottom: 20px;
 }
 @media (min-width: 940px) {
-  .events-list.left {
+  .events .event.left {
     width: 47.82609%;
     float: left;
     margin-right: 4.34783%;
@@ -1756,11 +1776,15 @@ section.front a {
   }
 }
 @media (min-width: 940px) {
-  .events-list.right {
+  .events .event.right {
     width: 47.82609%;
     float: right;
     margin-right: 0;
   }
+}
+
+.events-list {
+  background-color: #faa41a;
 }
 
 .pagelink {
@@ -1813,6 +1837,21 @@ section.front a {
 }
 .section-header.orange {
   background-color: #faa41a;
+}
+
+.list-title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-size: 28px;
+  line-height: 44px;
+  font-size: 2.8rem;
+  line-height: 4.4rem;
+  -webkit-border-radius: 0 15px;
+  -moz-border-radius: 0 15px;
+  -ms-border-radius: 0 15px;
+  -o-border-radius: 0 15px;
+  border-radius: 0 15px;
+  color: #faa41a;
 }
 
 .page-template-page-php .content {
@@ -2021,6 +2060,7 @@ select {
   -ms-border-radius: 0 15px;
   -o-border-radius: 0 15px;
   border-radius: 0 15px;
+  height: 332px;
 }
 
 ol.flex-control-paging {

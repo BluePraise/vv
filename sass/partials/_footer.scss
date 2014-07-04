@@ -1,25 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:700);
 .site-footer {
 	clear: both;
-  font-family: $colabReg;
+  @include border-radius(15px 15px 0 0);
 	background-color: $purple;
-	color: #fff;
-  @include font-size(16,22);
-  padding: 25px;
-  min-height: 175px;
+  font-weight: bold;
+  color: #fff;
+  padding: 1em;
+  min-height: 200px;
 }
 
 .sitemap,
 .address-stuff {
-  @include span-columns(4 , 12);
+  @include span-columns(3 , 12);
+}
+.widget_text {
+
+}
+
+.copyright {
+  @include span-columns(12, 12);
+  span {
+    display: block;
+    text-align: right;
+  }
 }
 
 .legal-stuff {
-  @include span-columns(4 omega, 12);
+  @include span-columns(3 , 12);
 }
 
 .footer-info {
   h3 {
     color: $white;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
+}
+
+.magalielinda {
+  font-family: 'Oswald', sans-serif;
 }

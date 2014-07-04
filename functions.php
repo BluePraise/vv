@@ -124,9 +124,9 @@ function vv_sidebar() {
   ) );
 
   register_sidebar( array(
-    'name'          => __( 'Activity Post Sidebar', 'vv' ),
+    'name'          => __( 'Activity Sidebar', 'vv' ),
     'id'            => 'sidebar-activity-page',
-    'description'   => __( 'Sidebar voor de activiteiten pagina', 'text_domain' ),
+    'description'   => __( 'Sidebar voor de activiteiten pagina en standaard pagina', 'text_domain' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h3 class="h5 widget-title">',

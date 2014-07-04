@@ -6,22 +6,25 @@
  * #main and #page div elements.
  */
 ?>
-	</div><!-- #main -->
+</div><!-- #main -->
+
+	<footer id="colophon" class="site-footer purple" role="contentinfo">
+		<div class="footer-info address-stuff">
+      <?php dynamic_sidebar( 'sidebar-footer-address' ); ?>
+    </div>
 
 
-		<footer id="colophon" class="site-footer purple" role="contentinfo">
-				<div class="footer-info address-stuff">
-        <?php dynamic_sidebar( 'sidebar-footer-address' ); ?>
-        </div>
-        <div class="footer-info sitemap">
-        <?php dynamic_sidebar( 'sidebar-footer-sitemap' ); ?>
-        </div>
-        <div class="footer-info legal-stuff">
+    <div class="footer-info legal-stuff">
         <?php dynamic_sidebar( 'sidebar-footer-legalstuff' ); ?>
-				</div> <!--end footerinfo -->
+    </div> <!--end footerinfo -->
 
-		</footer><!-- #colophon -->
-		</div><!-- #page -->
+    <div class="footer-info copyright">
+        <span>Alle Rechten Voorbehouden <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Email"><?php echo bloginfo();?> </a> <?php echo date('Y'); ?>.</span>
+        <span class="magalielinda">Deze site is gebouwd door <a href="http://mayconnect.org" title="Website Bouw Arnhem">Magalie Linda</a>.</span>
+    </div> <!--end footerinfo -->
+
+	</footer><!-- #colophon -->
+</div><!-- #page -->
 
 <?php wp_footer(); ?>
 </body>

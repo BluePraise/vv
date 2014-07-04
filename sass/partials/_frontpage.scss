@@ -35,6 +35,9 @@ section.front {
 .activity-list {
   @include border-radius(0 15px);
   padding: 10px;
+  li:last {
+    margin-bottom: 0;
+  }
   &.red {
     background-color: $red;
   }
@@ -48,21 +51,23 @@ section.front {
   @include at-breakpoint($desktop) {
     @include span-columns(9 omega ,12);
   }
+  .event {
+    &.left {
+      margin-bottom: 20px;
+      @include at-breakpoint($desktop) {
+        @include span-columns(3,6);
+        margin-bottom: 0px;
+      }
+    }
+    &.right {
+      @include at-breakpoint($desktop) {
+        @include span-columns(3 omega, 6);
+      }
+    }
+  }
 }
 .events-list {
   background-color: $orange;
-  &.left {
-    margin-bottom: 20px;
-    @include at-breakpoint($desktop) {
-      @include span-columns(3,6);
-      margin-bottom: 0px;
-    }
-  }
-  &.right {
-    @include at-breakpoint($desktop) {
-      @include span-columns(3 omega, 6);
-    }
-  }
 }
 
 .pagelink {
@@ -101,4 +106,12 @@ section.front {
   &.orange {
     background-color: $orange;
   }
+}
+
+.list-title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  @include font-size(28,44);
+  @include border-radius(0 15px);
+  color: $orange;
 }

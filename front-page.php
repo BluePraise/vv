@@ -64,66 +64,81 @@ get_header();
 
 <!-- Start Special Events Block -->
 <section class="events front">
-  <div class="section-header orange"><a href="/zomerschool-2014">Zomerschool 2014</a></div>
-  <ul class="events-list activity-list left">
-  <h3>Dinsdag</h3>
-  <?php
-
-    $args = array(
-      'category'        => 'zomerschool 2014',
-      'tag'             => 'dinsdag',
-      'order'           => 'DESC',
-      'orderby'         => 'date',
-      'posts_per_page'  => 6,
-      'nopaging'        => false
-      );
-
-    $loop = new WP_Query( $args );
-
-      while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-        <li class="activity-item">
-
-          <a class="activity-item-title" href="'<?php the_permalink() ?>" rel="bookmark">
-              <?php the_title(); ?>
-          </a>
-        </li>
+  <div class="section-header orange"><a href="<?php echo esc_url( home_url( '/' ) );?>/zomerschool-2014">Zomerschool 2014</a></div>
+  <div class="event left">
+    <h3 class="list-title">Dinsdag</h3>
+    <ul class="events-list activity-list left">
     <?php
-      endwhile;
-      wp_reset_query();
-      wp_reset_postdata();
-    ?>
-  </ul>
-  <ul class="events-list activity-list right">
-  <h3>Donderdag</h3>
-  <?php
 
-    $args = array(
-      'category'        => 'Event',
-      'tag'             => 'donderdag',
-      'order'           => 'DESC',
-      'orderby'         => 'date',
-      'posts_per_page'  => 6,
-      'nopaging'        => false
-      );
+      $args = array(
+        'category'        => 'zomerschool 2014',
+        'tag'             => 'dinsdag',
+        'order'           => 'DESC',
+        'orderby'         => 'date',
+        'posts_per_page'  => 6,
+        'nopaging'        => false
+        );
 
-    $loop = new WP_Query( $args );
+      $loop = new WP_Query( $args );
 
-      while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-        <li class="activity-item">
+          <li class="activity-item">
+            <div class="activity-date">
+              <div class="activity-start-date the-date">
+                  <?php the_field('dagdeel') ?>
+              </div>
+            </div>
 
-          <a class="activity-item-title" href="'<?php the_permalink() ?>" rel="bookmark">
-              <?php the_title(); ?>
-          </a>
+            <a class="activity-item-title" href="<?php echo esc_url( home_url( '/' ) );?>/zomerschool-2014"  rel="bookmark">
+                <?php the_title(); ?>
+            </a>
+          </li>
+      <?php
+        endwhile;
+        wp_reset_query();
+        wp_reset_postdata();
+      ?>
+    </ul>
+  </div>
+  <div class="event right">
 
-        </li>
+    <h3 class="list-title last">Donderdag</h3>
+    <ul class="events-list activity-list right">
     <?php
-      endwhile;
-      wp_reset_query();
-      wp_reset_postdata();
-    ?>
-  </ul>
+
+      $args = array(
+        'category'        => 'Event',
+        'tag'             => 'donderdag',
+        'order'           => 'ASC',
+        'orderby'         => 'date',
+        'posts_per_page'  => 6,
+        'nopaging'        => false
+        );
+
+      $loop = new WP_Query( $args );
+
+        while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+          <li class="activity-item">
+            <div class="activity-date">
+              <div class="activity-start-date the-date">
+                  <?php the_field('dagdeel') ?>
+              </div>
+            </div>
+
+            <a class="activity-item-title" href="<?php echo esc_url( home_url( '/' ) );?>/zomerschool-2014" rel="bookmark">
+                <?php the_title(); ?>
+            </a>
+
+          </li>
+      <?php
+        endwhile;
+        wp_reset_query();
+        wp_reset_postdata();
+      ?>
+    </ul>
+  </div>
 </section>
 
 <?php
