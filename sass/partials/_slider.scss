@@ -2,6 +2,13 @@
   margin-bottom: 30px;
   border: 4px $orange solid;
   @include border-radius(0 15px);
+  .caption-wrap {
+    @include border-radius(0 0 15px 15px);
+    text-align: right;
+    background: $white;
+    color: orange;
+    font-size: 30px;
+  }
 }
 .flexslider {
   position: relative;
@@ -14,13 +21,6 @@
   li img {
     @include border-radius(0 15px);
     height: 332px;
-  }
-  .caption-wrap {
-    @include border-radius(0 0 15px 15px);
-    text-align: right;
-    background: white;
-    color: orange;
-    font-size: 30px;
   }
 }
 

@@ -2051,6 +2051,17 @@ select {
   -o-border-radius: 0 15px;
   border-radius: 0 15px;
 }
+.metaslider .caption-wrap {
+  -webkit-border-radius: 0 0 15px 15px;
+  -moz-border-radius: 0 0 15px 15px;
+  -ms-border-radius: 0 0 15px 15px;
+  -o-border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
+  text-align: right;
+  background: white;
+  color: orange;
+  font-size: 30px;
+}
 
 .flexslider {
   position: relative;
@@ -2067,17 +2078,6 @@ select {
   -o-border-radius: 0 15px;
   border-radius: 0 15px;
   height: 332px;
-}
-.slides .caption-wrap {
-  -webkit-border-radius: 0 0 15px 15px;
-  -moz-border-radius: 0 0 15px 15px;
-  -ms-border-radius: 0 0 15px 15px;
-  -o-border-radius: 0 0 15px 15px;
-  border-radius: 0 0 15px 15px;
-  text-align: right;
-  background: white;
-  color: orange;
-  font-size: 30px;
 }
 
 ol.flex-control-paging {
