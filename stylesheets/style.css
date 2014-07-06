@@ -2054,6 +2054,7 @@ select {
 
 .flexslider {
   position: relative;
+  margin: 0 !important;
 }
 .flexslider .flex-viewport {
   height: 333px;
