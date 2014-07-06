@@ -1488,7 +1488,7 @@ h1.site-title {
 }
 h1.site-title a.logo {
   display: block;
-  background: url('../images/logo.png?1395739709') no-repeat;
+  background: url('../images/logo.png?1404634056') no-repeat;
   background-position: 50% 50%;
   height: 180px;
 }
@@ -2067,6 +2067,17 @@ select {
   -o-border-radius: 0 15px;
   border-radius: 0 15px;
   height: 332px;
+}
+.slides .caption-wrap {
+  -webkit-border-radius: 0 0 15px 15px;
+  -moz-border-radius: 0 0 15px 15px;
+  -ms-border-radius: 0 0 15px 15px;
+  -o-border-radius: 0 0 15px 15px;
+  border-radius: 0 0 15px 15px;
+  text-align: right;
+  background: white;
+  color: orange;
+  font-size: 30px;
 }
 
 ol.flex-control-paging {
