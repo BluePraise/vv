@@ -1,49 +1,31 @@
 section.front {
   padding: 0;
+}
+
+.section-header {
+  @include font-size(16,44);
+  @include border-radius(0 15px);
+  margin-bottom: 10px;
+  font-weight: bold;
+  padding: 0 1em;
+  color: $white;
   a {
     color: $white;
-    font-weight: bold;
-  }
-}
-
-.front-sidebar {
-  @include span-columns(4);
-  margin-bottom: 50px;
-  @include at-breakpoint($desktop) {
-    margin-bottom: 0;
-    @include span-columns(3,12);
-  }
-}
-.pagelink-block {
-  margin-bottom: 50px;
-}
-.activiteiten {
-  .activity-item-title {
-    color: white;
-    font-weight: bold;
-    @include font-size(14, 14);
-  }
-  .the-date {
-    display: inline;
-    @include font-size(12, 14);
-  }
-}
-
-.activity-item {
-  margin-bottom: 10px;
-}
-.activity-list {
-  @include border-radius(0 15px);
-  padding: 10px;
-  li:last {
-    margin-bottom: 0;
   }
   &.red {
     background-color: $red;
   }
-  a {
-    @include font-size(14, 14);
+  &.orange {
+    background-color: $orange;
   }
+}
+
+.list-title {
+  margin-top: 0;
+  margin-bottom: 13px;
+  @include font-size(28,44);
+  @include border-radius(0 15px);
+  color: $orange;
 }
 
 .events {
@@ -70,48 +52,30 @@ section.front {
   background-color: $orange;
 }
 
-.pagelink {
-  @include font-size(16,44);
+span.read-more {
+  clear: both;
+  float: right;
+  display: block;
+  margin-top: 15px;
+  padding: 1em;
   @include border-radius(0 15px);
-  margin-bottom: 10px;
-  padding: 0 1em;
-  font-weight: bold;
-  a {
-    color: white;
-  }
-  &.darkgreen {
-    background-color: $darkgreen;
-  }
-  &.aquagreen {
-    background-color: $aquaGreen
-  }
-  &.lilac {
-    background-color: $lilac;
-  }
-  &.red {
-    background-color: $red;
-  }
-}
-
-.section-header {
-  @include font-size(16,44);
-  @include border-radius(0 15px);
-  margin-bottom: 10px;
-  font-weight: bold;
-  padding: 0 1em;
-  color: $white;
-  &.red {
-    background-color: $red;
-  }
   &.orange {
-    background-color: $orange;
+    border: 2px solid $orange;
   }
-}
-
-.list-title {
-  margin-top: 0;
-  margin-bottom: 13px;
-  @include font-size(28,44);
-  @include border-radius(0 15px);
-  color: $orange;
+  &:hover {
+    cursor: pointer;
+    background-color: $orange;
+    a {
+      color: $white;
+    }
+  }
+  a {
+    display: block;
+    &:before {
+      display: inline-block;
+      font-family: 'icomoon';
+      margin-right: 10px;
+      content: "\e609";
+    }
+  }
 }

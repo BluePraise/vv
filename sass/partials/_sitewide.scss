@@ -40,6 +40,11 @@
 	}
 }
 
+ .content {
+  @include span-columns(9 omega,12);
+  @include prefix(1,12);
+}
+
 .site-footer {
   border-top: 1px dotted $grey;
   padding-top: 20px;
@@ -56,130 +61,41 @@
   a {
     color: white;
   }
-  &.darkgreen {
-    background-color: $darkgreen;
-  }
-  &.aquagreen {
-    background-color: $aquaGreen
-  }
-  &.lilac {
-    background-color: $lilac;
-  }
-  &.red {
-    background-color: $red;
-  }
-  &.orange {
-    color: $orange;
-    border-bottom: 4px solid;
-  }
-}
-
-.blue {
-  a {
-    color: $blue;
-  }
-  .main-navigation & {
-    border: 2px solid $blue;
-    &:hover {
-      background-color: $blue;
-    }
-  }
-  &.content {
-    border: 4px $blue solid;
-  }
-  &.content-sidebar {
-    aside {
-      border: 4px $blue solid;
-      background-color: $blue;
-    }
-  }
-}
-
-.orange {
-  a {
-    color: $orange;
-  }
-  .main-navigation & {
-    border: 2px solid $orange;
-    &:hover {
-      background-color: $orange;
-    }
-  }
-  &.content {
-    border: 4px $orange solid;
-  }
-  &.content-sidebar {
-    aside {
-      border: 4px $orange solid;
-      background-color: $orange;
-    }
-  }
-}
-
-.red {
-  a {
-    color: $red;
-  }
-  .main-navigation & {
-    border: 2px solid $red;
-    &:hover {
-      background-color: $red;
-    }
-  }
-  &.content {
-    // border: 4px $red solid;
-  }
-  &.content-sidebar {
-    aside {
-      background-color: $red;
-    }
-  }
-}
-
-.lilac {
-  a {
-    color: $lilac;
-  }
-  .main-navigation & {
-    border: 2px solid $lilac;
-    &:hover {
-      background-color: $lilac;
-    }
-  }
-  &.content {
-    border: 4px $lilac solid;
-  }
-  &.content-sidebar {
-    aside {
-      border: 4px $lilac solid;
-      background-color: $lilac;
-    }
-  }
-}
-.darkgreen {
-  a {
+  &.darkgreen,
+  .darkgreen & {
     color: $darkgreen;
+    border-bottom: 4px solid $darkgreen;
   }
-  .main-navigation & {
-    border: 2px solid $darkgreen;
-    &:hover {
-      background-color: $darkgreen;
-    }
+  &.aquagreen,
+  .aquagreen & {
+    color: $aquagreen;
+    border-bottom: 4px solid $aquagreen;
   }
-  &.content {
-    border: 4px $darkgreen solid;
+  &.lilac,
+  .lilac & {
+    color: $lilac;
+    border-bottom: 4px solid $lilac;
   }
-  &.content-sidebar {
-    aside {
-      border: 4px $darkgreen solid;
-      background-color: $darkgreen;
-    }
+  &.red,
+  .red & {
+    color: $red;
+    border-bottom: 4px solid $red;
+  }
+  &.orange,
+  .orange & {
+    color: $orange;
+    border-bottom: 4px solid $orange;
+  }
+  &.blue,
+  .blue & {
+    color: $blue;
+    border-bottom: 4px solid $blue;
   }
 }
-
 
 .comments-area {
   border-top: dashed $black 1px;
+  margin-top: 30px;
 }
 
 .edit-link {

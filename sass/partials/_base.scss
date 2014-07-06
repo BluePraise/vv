@@ -27,12 +27,11 @@ button,
 input,
 select,
 textarea {
-	font-family: $base-font-family;
-	font-weight: 100;
 }
 
 body {
 	font-family: sans-serif;
+	font-weight: 400;
 	font-size: 14px;
 	color: #000;
 	background-color: #fff;
@@ -51,11 +50,38 @@ body.admin-bar
 }
 
 a {
-	color: $secondaryColor;
+	color: $orange;
+	.red & {
+		color: $red;
+	}
+	.blue & {
+		color: $blue;
+	}
+	.darkgreen & {
+		color: $darkgreen;
+	}
+	.aquagreen & {
+		color: $aquagreen;
+	}
+	.lilac & {
+		color: $lilac;
+	}
 }
 
 a:visited {
-	color: $blue;
+	color: $orange;
+	.red & {
+		color: $red;
+	}
+	.blue & {
+		color: $blue;
+	}
+	.darkgreen & {
+		color: $darkgreen;
+	}
+	.lilac & {
+		color: $lilac;
+	}
 }
 
 a:focus {
@@ -64,10 +90,26 @@ a:focus {
 
 a:active,
 a:hover {
-	color: $blue;
+	color: white;
 	outline: 0;
 	-webkit-transition: width 400ms ease, background 400ms ease;
 	transition:         width 400ms ease, background 400ms ease;
+	background-color: $orange;
+	.red & {
+		background-color: $red;
+	}
+	.blue & {
+		background-color: $blue;
+	}
+	.darkgreen & {
+		background-color: $darkgreen;
+	}
+	.lilac & {
+		background-color: $lilac;
+	}
+	.aquagreen & {
+		background-color: $aquagreen;
+	}
 }
 
 h1,
@@ -506,7 +548,7 @@ img[class*="align"],
 img[class*="wp-image-"],
 img[class*="attachment-"] {
 	height: auto;
-	width: 100%;
+	max-width: 100%;
 }
 
 img.size-full,

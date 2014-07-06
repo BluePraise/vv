@@ -4,31 +4,30 @@
 */
 get_header();
 
-
+get_sidebar( );
 ?>
-
-<div class="content-sidebar orange widget-area" role="complementary">
-    <?php dynamic_sidebar( 'sidebar-activity-page' ); ?>
-</div><!-- #content-sidebar -->
 
 <div class="content standard">
   <h1 class="pagetitle orange"><?php the_title(); ?></h1>
-  <article class="page-article">
 
   <?php
-  if ( have_posts() ) : while ( have_posts() ) : the_post();
+    if ( get_post_status ( ) == 'private' && ! post_password_required() ) {
+      echo '<h1>Nothing to display</h1>';
+    }
+    else {
+      if ( have_posts() ) : while ( have_posts() ) : the_post();
+        the_content();
 
-    the_content();
-    endwhile;
+        if ( ! post_password_required()) :
+        edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );
+        endif;
+      endwhile;
+      endif; // End of the loop
+      }
   ?>
-
-  </article>
 </div> <!-- end of contentclass -->
 
 <?php
-endif;
 
-
-get_footer();
-
+ get_footer();
 ?>

@@ -8,3 +8,49 @@
 	}
 }
 
+.inverse-link-color {
+  a {
+    color: $white;
+  }
+
+  a:focus {
+    outline: thin dotted;
+  }
+
+  a:visited {
+    color: $white;
+    .red & {
+      background-color: $red;
+    }
+    .blue & {
+      background-color: $blue;
+    }
+    .darkgreen & {
+      background-color: $darkgreen;
+    }
+    .lilac & {
+      background-color: $lilac;
+    }
+  }
+
+  a:active,
+  a:hover {
+    color: white;
+    outline: 0;
+    -webkit-transition: width 400ms ease, background 400ms ease;
+    transition:         width 400ms ease, background 400ms ease;
+    background-color: $white;
+    .red & {
+      color: $red;
+    }
+    .blue & {
+      color: $blue;
+    }
+    .darkgreen & {
+      color: $darkgreen;
+    }
+    .lilac & {
+      color: $lilac;
+    }
+  }
+}

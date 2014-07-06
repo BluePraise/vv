@@ -1,22 +1,14 @@
-<?php
-/*
-* Template Name: Blog Page
-*/
-get_header();
-
-
-?>
 
 <aside class="front-sidebar">
   <div class="pagelink-block">
-    <div class="pagelink darkgreen blog"><a href="/zomerschool-2014">Zomerschool 2014</a></div>
-    <div class="pagelink aquagreen"><a href="#">Activiteiten 2014</a></div>
+    <div class="pagelink blue"><a href="/nieuws">Het laatste nieuws</a></div>
+    <div class="pagelink red"><a href="/activiteiten">Activiteiten <?php echo date('Y'); ?></a></div>
     <div class="pagelink lilac"><a href="/zet-ons-in/">Zet ons in!</a></div>
   </div>
 
   <!-- Start Activiteiten Block -->
   <div class="activiteiten front">
-    <div class="section-header red">Meest recente activiteiten</div>
+    <div class="section-header red">Recente activiteiten</div>
     <ul class="activity-list red">
     <?php
 
@@ -56,26 +48,3 @@ get_header();
     </ul>
   </div>
 </aside>
-<div class="content articles darkgreen">
-  <article>
-
-<?php
-if ( have_posts() ) :
-  while ( have_posts() ) :
-    the_post();
-  ?>
-  <?php
-    the_content();
-  endwhile;
-?>
-
-</article>
-</div> <!-- end of contentclass -->
-
-<?php
-endif;
-
-
-get_footer();
-
-?>

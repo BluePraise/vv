@@ -22,3 +22,59 @@ ul.sidebar-agenda-widget {
     padding: 5px 0;
   }
 }
+
+.pagelink {
+  @include font-size(16,44);
+  @include border-radius(0 15px);
+  margin-bottom: 10px;
+  padding: 0 1em;
+  font-weight: bold;
+  &.blue {
+    background-color: $blue;
+  }
+  &.red {
+    background-color: $red;
+  }
+  &.lilac {
+    background-color: $lilac;
+  }
+  a {
+    color: $white;
+    &:visited {
+      color: $white;
+    }
+  }
+}
+
+.front-sidebar {
+  @include span-columns(4);
+  margin-bottom: 50px;
+  @include at-breakpoint($desktop) {
+    margin-bottom: 0;
+    @include span-columns(3,12);
+  }
+}
+.pagelink-block {
+  margin-bottom: 50px;
+}
+
+.activity-list {
+  @include border-radius(0 15px);
+  padding: 1em;
+  background-color: $red;
+  li {
+    margin-bottom: 10px;
+    &:last {
+      margin-bottom: 0;
+    }
+    a.activity-item-title {
+      @include font-size(14, 14);
+      color: white;
+      font-weight: bold;
+    }
+    .the-date {
+      display: inline;
+      @include font-size(12, 14);
+    }
+  }
+}

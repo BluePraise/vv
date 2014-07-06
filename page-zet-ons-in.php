@@ -3,33 +3,24 @@
 * Template Name: Zet Ons In Page
 */
 get_header();
-
+get_sidebar();
 
 ?>
 
-<div class="content-sidebar lilac widget-area" role="complementary">
-    <?php dynamic_sidebar( 'sidebar-zetonsin-page' ); ?>
-</div><!-- #content-sidebar -->
-<div class="content articles lilac">
-  <article>
-
+<div class="content lilac">
+  <h1 class="pagetitle"><?php the_title(); ?></h1>
 <?php
-if ( have_posts() ) :
-  while ( have_posts() ) :
-    the_post();
-  ?>
-  <?php
+  if ( get_post_status ( ) == 'private' ) {
+    echo '<h1>Nothing to display</h1>';
+  } else {
     the_content();
-  endwhile;
-?>
+  }
 
-</article>
+  ?>
+
 </div> <!-- end of contentclass -->
 
 <?php
-endif;
-
-
 get_footer();
 
 ?>

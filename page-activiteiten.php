@@ -3,55 +3,31 @@
 * Template Name: Activiteiten Page
 */
 get_header();
-
-
+get_sidebar();
 ?>
 
-<div class="content-sidebar red widget-area" role="complementary">
-    <?php dynamic_sidebar( 'sidebar-activity-page' ); ?>
-</div><!-- #content-sidebar -->
-
-
-<div class="content articles red">
-  <!-- main content for article page -->
-  <section>
-
-        <?php
-        if ( have_posts() ) :
-          while ( have_posts() ) : the_post();
-
-            the_content();
-
-          endwhile;
-        endif;
-
-        wp_reset_query(); ?>
-
-  </section>
-
+  <div class="content red">
+    <h1 class="pagetitle"><?php echo $pagename; ?></h1>
     <?php
-        // New query for activities category
-        query_posts('cat=134');
-        // The loop.
-        if ( have_posts() ) :
-          while ( have_posts() ) : the_post();?>
-            <article class="activity-overview activity">
-              <h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                <?php the_content();
+    $args = array(
+      'post_status' => array(
+        'pending',
+        'draft',
+        'auto-draft',
+        'future',
+        'private',
+        'trash'
+        ),
+      );
+      if ( have_posts() ) :  while ( have_posts() ) : the_post();
 
-              if ( ! post_password_required()) :
-                edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );
-              endif; ?>
+      the_content();
 
-            </article>
-          <?php endwhile; ?>
+      endwhile;
+      endif;
 
-</div> <!-- end of contentclass -->
+      wp_reset_query();
+    ?>
+  </div> <!-- end of contentclass -->
 
-
-<?php
-wp_reset_query();
-endif;
-get_footer();
-
-?>
+<?php get_footer(); ?>

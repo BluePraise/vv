@@ -5,18 +5,14 @@
 */
 
 get_header();
+get_sidebar();
 ?>
 
-<div class="content-sidebar red widget-area" role="complementary">
-    <?php dynamic_sidebar( 'sidebar-activity-page' ); ?>
-</div><!-- #content-sidebar -->
-
-<div class="content content-single articles red">
-  <article>
+<div class="content red">
 
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-  <h2 class="h1 page-title single-activity-title"><?php the_title(); ?></h2>
+  <h1 class="pagetitle single-activity-title"><?php the_title(); ?></h1>
 
       <div class="single-image single-activity-image">
         <?php
@@ -42,7 +38,7 @@ get_header();
   endwhile;
 ?>
 
-</article>
+
   <?php comments_template(); ?>
 </div> <!-- end of contentclass -->
 

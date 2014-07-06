@@ -1,7 +1,9 @@
 header {
   width: 100%;
-  margin-bottom: 20px;
   float: left;
+  @include at-breakpoint($tablet) {
+    margin-bottom: 50px;
+  }
 }
 
 h1.site-title {
@@ -26,19 +28,36 @@ h1.site-title {
   li {
     display: inline-block;
     margin: 5px 10px 5px 0;
-    background-color: $white;
     @include border-radius(0 15px);
     &:hover {
-      a {
-        color: $white;
-      }
+      border: none;
     }
     a {
       display: inline-block;
       padding: 8px 10px;
-      font-weight: bold;
-      font-size: 14px;
       text-decoration: none;
+      &:hover {
+        @include border-radius(0 15px);
+        color: $white;
+      }
+    }
+    &.darkgreen {
+      border: 2px solid $darkgreen;
+    }
+    &.aquagreen {
+      border: 2px solid $aquagreen;
+    }
+    &.lilac {
+      border: 2px solid $lilac;
+    }
+    &.red {
+      border: 2px solid $red;
+    }
+    &.orange {
+      border: 2px solid $orange;
+    }
+    &.blue {
+      border: 2px solid $blue;
     }
   }
 }

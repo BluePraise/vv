@@ -5,8 +5,6 @@
 get_header();
 
 ?>
-<div class="content">
-
 <?php
 if ( have_posts() ) :
 	while ( have_posts() ) :
@@ -16,7 +14,6 @@ if ( have_posts() ) :
 ?>
 
 
-</div> <!-- end of contentclass -->
 
 <?php
 endif;
