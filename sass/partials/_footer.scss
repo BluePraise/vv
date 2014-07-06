@@ -14,9 +14,6 @@
 .address-stuff {
   @include span-columns(3 , 12);
 }
-.widget_text {
-
-}
 
 .copyright {
   @include span-columns(12, 12);
@@ -26,8 +23,12 @@
   }
 }
 
-.legal-stuff {
+.links {
   @include span-columns(3 , 12);
+  ul li {
+    margin-bottom: 5px;
+    padding: 2px 0;
+  }
 }
 
 .footer-info {

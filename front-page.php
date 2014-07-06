@@ -23,13 +23,13 @@ get_header();
     <h3 class="list-title">Dinsdag</h3>
     <ul class="events-list activity-list left">
     <?php
-
       $args = array(
-        'category'        => 'zomerschool 2014',
+        'category'        => 'Event',
         'tag'             => 'dinsdag',
-        'order'           => 'DESC',
+        'year'            => 2014,
+        'order'           => 'ASC',
         'orderby'         => 'date',
-        'posts_per_page'  => 6,
+        'posts_per_page'  => 9,
         'nopaging'        => false
         );
 
@@ -60,13 +60,15 @@ get_header();
     <h3 class="list-title last">Donderdag</h3>
     <ul class="events-list activity-list right">
     <?php
+      $current_month = date('m');
 
       $args = array(
         'category'        => 'Event',
         'tag'             => 'donderdag',
+        'year'            => 2014,
         'order'           => 'ASC',
         'orderby'         => 'date',
-        'posts_per_page'  => 6,
+        'posts_per_page'  => 9,
         'nopaging'        => false
         );
 

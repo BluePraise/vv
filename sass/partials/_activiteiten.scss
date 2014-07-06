@@ -12,6 +12,10 @@
   display: table;
   margin-bottom: 10px;
 }
+
+li.activity-item {
+  min-height: 50px;
+}
 .activity-label {
   display: table-cell;
   color: red;
