@@ -543,49 +543,50 @@ dd {
   list-style: none;
 }
 
-.inverse-link-color a {
+.inverse-link-color a, .activity-list li a a {
   color: white;
 }
-.inverse-link-color a:focus {
+.inverse-link-color a:focus, .activity-list li a a:focus {
   outline: thin dotted;
 }
-.inverse-link-color a:visited {
+.inverse-link-color a:visited, .activity-list li a a:visited {
   color: white;
 }
-.red .inverse-link-color a:visited {
+.red .inverse-link-color a:visited, .red .activity-list li a a:visited, .activity-list li .red a a:visited {
   background-color: #ed1651;
 }
-.blue .inverse-link-color a:visited {
+.blue .inverse-link-color a:visited, .blue .activity-list li a a:visited, .activity-list li .blue a a:visited {
   background-color: #0090bc;
 }
-.darkgreen .inverse-link-color a:visited {
+.darkgreen .inverse-link-color a:visited, .darkgreen .activity-list li a a:visited, .activity-list li .darkgreen a a:visited {
   background-color: #16585d;
 }
-.lilac .inverse-link-color a:visited {
+.lilac .inverse-link-color a:visited, .lilac .activity-list li a a:visited, .activity-list li .lilac a a:visited {
   background-color: #6f83c1;
 }
-.inverse-link-color a:active,
-.inverse-link-color a:hover {
+.inverse-link-color a:active, .activity-list li a a:active,
+.inverse-link-color a:hover,
+.activity-list li a a:hover {
   color: white;
   outline: 0;
   -webkit-transition: width 400ms ease, background 400ms ease;
   transition: width 400ms ease, background 400ms ease;
   background-color: white;
 }
-.red .inverse-link-color a:active, .red
-.inverse-link-color a:hover {
+.red .inverse-link-color a:active, .red .activity-list li a a:active, .activity-list li .red a a:active, .red
+.inverse-link-color a:hover, .red .activity-list li a a:hover, .activity-list li .red a a:hover {
   color: #ed1651;
 }
-.blue .inverse-link-color a:active, .blue
-.inverse-link-color a:hover {
+.blue .inverse-link-color a:active, .blue .activity-list li a a:active, .activity-list li .blue a a:active, .blue
+.inverse-link-color a:hover, .blue .activity-list li a a:hover, .activity-list li .blue a a:hover {
   color: #0090bc;
 }
-.darkgreen .inverse-link-color a:active, .darkgreen
-.inverse-link-color a:hover {
+.darkgreen .inverse-link-color a:active, .darkgreen .activity-list li a a:active, .activity-list li .darkgreen a a:active, .darkgreen
+.inverse-link-color a:hover, .darkgreen .activity-list li a a:hover, .activity-list li .darkgreen a a:hover {
   color: #16585d;
 }
-.lilac .inverse-link-color a:active, .lilac
-.inverse-link-color a:hover {
+.lilac .inverse-link-color a:active, .lilac .activity-list li a a:active, .activity-list li .lilac a a:active, .lilac
+.inverse-link-color a:hover, .lilac .activity-list li a a:hover, .activity-list li .lilac a a:hover {
   color: #6f83c1;
 }
 
@@ -1488,7 +1489,7 @@ h1.site-title {
 }
 h1.site-title a.logo {
   display: block;
-  background: url('../images/logo.png?1395739709') no-repeat;
+  background: url('../images/logo.png?1404633904') no-repeat;
   background-position: 50% 50%;
   height: 180px;
 }
@@ -1640,7 +1641,7 @@ ul.sidebar-agenda-widget > li {
 .activity-list li:last {
   margin-bottom: 0;
 }
-.activity-list li a.activity-item-title {
+.activity-list li a {
   font-size: 14px;
   line-height: 14px;
   font-size: 1.4rem;
@@ -1670,6 +1671,10 @@ ul.sidebar-agenda-widget > li {
   font-weight: bold;
   display: table;
   margin-bottom: 10px;
+}
+
+li.activity-item {
+  min-height: 50px;
 }
 
 .activity-label {
@@ -1735,11 +1740,15 @@ ul.sidebar-agenda-widget > li {
   text-align: right;
 }
 
-.legal-stuff {
+.links {
   width: 23.40426%;
   float: left;
   margin-right: 2.12766%;
   display: inline;
+}
+.links ul li {
+  margin-bottom: 5px;
+  padding: 2px 0;
 }
 
 .footer-info h3 {

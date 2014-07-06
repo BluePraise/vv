@@ -14,12 +14,13 @@
     </div>
 
 
-    <div class="footer-info legal-stuff">
+    <div class="footer-info links">
         <?php dynamic_sidebar( 'sidebar-footer-legalstuff' ); ?>
     </div> <!--end footerinfo -->
 
     <div class="footer-info copyright">
         <span>Alle Rechten Voorbehouden <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Email"><?php echo bloginfo();?> </a> <?php echo date('Y'); ?>.</span>
+        <span>Vormgeving door Linda van Sommeren.</span>
         <span class="magalielinda">Deze site is gebouwd door <a href="http://mayconnect.org" title="Website Bouw Arnhem">Magalie Linda</a>.</span>
     </div> <!--end footerinfo -->
 
