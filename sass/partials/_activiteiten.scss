@@ -26,6 +26,8 @@ span {
   @include border-radius(0 15px);
   padding: 1em;
   background-color: $red;
+  @include font-size(14, 14);
+  color: #FFF;
   li {
     min-height: 50px;
     margin-bottom: 10px;

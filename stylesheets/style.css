@@ -1536,6 +1536,11 @@ header {
   width: 100%;
   float: left;
 }
+@media (min-width: 460px) {
+  header {
+    margin-bottom: 30px;
+  }
+}
 @media (min-width: 780px) {
   header {
     margin-bottom: 50px;
@@ -1563,6 +1568,7 @@ h1.site-title a.logo {
   background: url('../images/logo.png?1404633904') no-repeat;
   background-position: 50% 50%;
   height: 180px;
+  background-size: contain;
 }
 
 .main-navigation {
@@ -1670,6 +1676,10 @@ ul.sidebar-agenda-widget > li {
 .pagelink.lilac {
   background-color: #6f83c1;
 }
+.pagelink.orange {
+  background-color: #faa41a;
+  color: white;
+}
 .pagelink a {
   color: white;
 }
@@ -1750,6 +1760,11 @@ span a.activity-item-title:visited {
   border-radius: 0 15px;
   padding: 1em;
   background-color: #ed1651;
+  font-size: 14px;
+  line-height: 14px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: #FFF;
 }
 .activity-list li {
   min-height: 50px;
@@ -2264,4 +2279,13 @@ ol.flex-control-paging {
   bottom: 50px;
   left: 400px li a;
   left-background: #faa41a;
+}
+
+.search-block input[type="text"] {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.search-block input[type="submit"] {
+  width: 90px;
+  float: right;
 }

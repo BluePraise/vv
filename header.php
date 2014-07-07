@@ -27,16 +27,17 @@
 
 <body <?php body_class(); ?>>
 
-		<div id="page" class="hfeed">
+	<div id="page" class="hfeed">
 
-			<header role="banner">
+		<header role="banner">
+
+				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'classy' ); ?></a>
+
 				<h1 class="site-title">
 					<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Vitale Verbindingen</a>
 				</h1>
-				<nav class="main-navigation" role="navigation">
-					<?php vv_menu(); ?>
-				</nav><!-- #site-navigation -->
-				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'classy' ); ?></a>
+
+				<nav class="main-navigation" role="navigation"><?php vv_menu(); ?></nav>
 
 
 			</header><!-- .site-header -->

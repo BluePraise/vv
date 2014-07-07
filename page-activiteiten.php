@@ -8,26 +8,19 @@ get_sidebar();
 
   <div class="content red">
     <h1 class="pagetitle"><?php echo $pagename; ?></h1>
-    <?php
-    $args = array(
-      'post_status' => array(
-        'pending',
-        'draft',
-        'auto-draft',
-        'future',
-        'private',
-        'trash'
-        ),
-      );
-      if ( have_posts() ) :  while ( have_posts() ) : the_post();
+    <<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+        the_content();
+        endwhile; ?>
+<?php else: ?>
+<!-- no posts found -->
+<span>Binnenkort wordt deze pagina gevuldt, we zijn er erg druk mee.</span>
+<?php endif;
 
-      the_content();
+if ( ! post_password_required()) :
+  edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );
+endif;
 
-      endwhile;
-      endif;
-
-      wp_reset_query();
-    ?>
+?>
   </div> <!-- end of contentclass -->
 
 <?php get_footer(); ?>

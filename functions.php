@@ -38,19 +38,23 @@ function disable_version() {
 }
 add_filter('the_generator','disable_version');
 
-
 // Deregistering styles and scripts that might be in the wp core.
 // Registering all kinds of cool styles and scripts.
 function scripts_and_styles() {
   global $wp_styles;
-  if (!is_admin()) {
 
     wp_deregister_script('jquery');
     wp_deregister_style( 'functions-style-css');
     wp_deregister_style( 'twentythirteen-style-css');
+    wp_deregister_style( 'open-sans-css');
+
+    if ( ! is_page( 'contact' ) ) {
+      wp_deregister_style( 'contact-form-7' );
+    }
 
     // register main stylesheets
     wp_register_style( 'stylesheet', get_stylesheet_directory_uri() . '/stylesheets/style.css', array(), '', 'all' );
+    wp_register_style( 'feather-stylesheet', get_stylesheet_directory_uri() . '/js/featherlight.min.css', array(), '', 'all' );
     // wp_register_style( 'genericons', get_stylesheet_directory_uri() . '/stylesheets/genericons/genericons.css', array(), '', 'all' );
 
     // comment reply script for threaded comments
@@ -58,25 +62,33 @@ function scripts_and_styles() {
       wp_enqueue_script( 'comment-reply' );
     }
     wp_register_script( 'jquery', get_stylesheet_directory_uri() . '/js/jquery.min.js', array(), '', false );
+    wp_register_script( 'featherlight', get_stylesheet_directory_uri() . '/js/featherlight.min.js', array(), '', false );
     // wp_register_script( 'html5-script', get_stylesheet_directory_uri() . '/js/html5.js', array( 'jquery' ), '', false );
-    // wp_register_script( 'classy-script', get_stylesheet_directory_uri() . '/js/classy-script.js', array( 'jquery' ), '', false );
+    wp_register_script( 'vv-script', get_stylesheet_directory_uri() . '/js/vv-script.js', array( 'jquery' ), '', false );
 
     // enqueue styles and scripts
     wp_enqueue_style( 'stylesheet' );
+    wp_enqueue_style( 'feather-stylesheet' );
     wp_enqueue_script( 'jquery' );
+    wp_enqueue_script( 'featherlight' );
     // wp_enqueue_script( 'html5-script' );
-    // wp_enqueue_script( 'classy-script' );
-  }
+    wp_enqueue_script( 'vv-script' );
+
 }
 
 add_action('wp_enqueue_scripts', 'scripts_and_styles', 999);
 
+function deregister_contact_form() {
+    if ( ! is_page( 'contact' ) ) {
+        remove_action('wp_enqueue_scripts', 'wpcf7_enqueue_scripts');
+    }
+}
+add_action( 'wp', 'deregister_contact_form');
+
 // This theme uses a custom image size for featured images, displayed on "standard" posts.
 add_theme_support( 'post-thumbnails' );
-set_post_thumbnail_size( 736, 328  ); // Unlimited height, soft crop
-add_image_size( 'artikel_middle_view', 585, 328 , false );
-add_image_size( 'artikel_large_view', 905, 328 , true );
-
+// set_post_thumbnail_size( 1040, 332  ); // Unlimited height, soft crop
+add_image_size( 'slider_size', 1040, 333 , true );
 // add_image_size( 'featured_image', 649, 150, true );
 
 
@@ -122,7 +134,15 @@ function vv_sidebar() {
     'before_title'  => '<h3 class=" h5 widget-title">',
     'after_title'   => '</h3>',
   ) );
-
+  register_sidebar( array(
+    'name'          => __( 'Search Sidebar', 'vv' ),
+    'id'            => 'sidebar-search',
+    'description'   => __( 'Sidebar met de zoekbalk', 'text_domain' ),
+    'before_widget' => '<div class="pagelink orange">Zoeken</div><div class="search-block red">',
+    'after_widget'  => '</div>',
+    'before_title'  => '',
+    'after_title'   => '',
+  ) );
   register_sidebar( array(
     'name'          => __( 'Activity Sidebar', 'vv' ),
     'id'            => 'sidebar-activity',

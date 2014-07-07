@@ -38,6 +38,10 @@ ul.sidebar-agenda-widget {
   &.lilac {
     background-color: $lilac;
   }
+  &.orange {
+    background-color: $orange;
+    color: $white;
+  }
   a {
     color: $white;
     &:visited {
