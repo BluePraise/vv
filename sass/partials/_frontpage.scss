@@ -30,18 +30,32 @@ section.front {
 
 .events {
   @include span-columns(4);
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(4 omega, 6);
+  }
+  @include at-breakpoint($tablet) {
+    @include span-columns(7 omega, 10);
+  }
   @include at-breakpoint($desktop) {
-    @include span-columns(9 omega ,12);
+    @include span-columns(9 omega,12);
   }
   .event {
     &.left {
       margin-bottom: 20px;
+      @include at-breakpoint($tablet) {
+        width: 48%;
+        float: left;
+      }
       @include at-breakpoint($desktop) {
         @include span-columns(3,6);
         margin-bottom: 0px;
       }
     }
     &.right {
+      @include at-breakpoint($tablet) {
+        width: 48%;
+        @include omega;
+      }
       @include at-breakpoint($desktop) {
         @include span-columns(3 omega, 6);
       }

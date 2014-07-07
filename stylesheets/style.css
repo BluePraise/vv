@@ -28,6 +28,34 @@ This theme, like WordPress, is licensed under the GPL.
   overflow: hidden;
 }
 
+.span-all-columns, .site-footer {
+  width: 100%;
+  float: left;
+  margin-right: 6.66667%;
+  display: inline;
+}
+@media (min-width: 460px) {
+  .span-all-columns, .site-footer {
+    width: 100%;
+    float: left;
+    margin-right: 4.34783%;
+  }
+}
+@media (min-width: 780px) {
+  .span-all-columns, .site-footer {
+    width: 100%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+}
+@media (min-width: 940px) {
+  .span-all-columns, .site-footer {
+    width: 100%;
+    float: left;
+    margin-right: 2.12766%;
+  }
+}
+
 /*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
 /* ==========================================================================
    HTML5 display definitions
@@ -544,25 +572,25 @@ dd {
 }
 
 .inverse-link-color a, .activity-list li a a {
-  color: white;
+  color: white !important;
 }
 .inverse-link-color a:focus, .activity-list li a a:focus {
   outline: thin dotted;
 }
 .inverse-link-color a:visited, .activity-list li a a:visited {
-  color: white;
+  color: white !important;
 }
 .red .inverse-link-color a:visited, .red .activity-list li a a:visited, .activity-list li .red a a:visited {
-  background-color: #ed1651;
+  background-color: #ed1651 !important;
 }
 .blue .inverse-link-color a:visited, .blue .activity-list li a a:visited, .activity-list li .blue a a:visited {
-  background-color: #0090bc;
+  background-color: #0090bc !important;
 }
 .darkgreen .inverse-link-color a:visited, .darkgreen .activity-list li a a:visited, .activity-list li .darkgreen a a:visited {
-  background-color: #16585d;
+  background-color: #16585d !important;
 }
 .lilac .inverse-link-color a:visited, .lilac .activity-list li a a:visited, .activity-list li .lilac a a:visited {
-  background-color: #6f83c1;
+  background-color: #6f83c1 !important;
 }
 .inverse-link-color a:active, .activity-list li a a:active,
 .inverse-link-color a:hover,
@@ -1106,8 +1134,24 @@ table {
   border-spacing: 0;
   font-size: 14px;
   line-height: 2;
-  margin: 0 0 20px;
+  padding: 0px;
   width: 100%;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+thead {
+  border-bottom: 4px solid #ededed;
 }
 
 caption,
@@ -1115,6 +1159,11 @@ th,
 td {
   font-weight: normal;
   text-align: left;
+  font-size: 12px;
+  line-height: 24px;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
 }
 
 caption {
@@ -1125,11 +1174,20 @@ caption {
 th {
   font-weight: bold;
   text-transform: uppercase;
+  background-color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: #fcf2e8;
+}
+
+tr:nth-child(even) {
+  background-color: white;
 }
 
 td {
+  width: 120px;
   border-top: 1px solid #ededed;
-  padding: 6px 10px 6px 0;
 }
 
 del {
@@ -1384,13 +1442,26 @@ img.wp-smiley,
   margin-top: 10px;
 }
 
-.content {
-  width: 74.46809%;
-  float: right;
-  margin-right: 0;
-  *margin-left: -20px;
-  display: inline;
-  padding-left: 8.51064%;
+@media (min-width: 460px) {
+  .content {
+    width: 65.21739%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 780px) {
+  .content {
+    width: 69.23077%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 940px) {
+  .content {
+    width: 74.46809%;
+    float: right;
+    margin-right: 0;
+  }
 }
 
 .site-footer {
@@ -1613,6 +1684,20 @@ ul.sidebar-agenda-widget > li {
   display: inline;
   margin-bottom: 50px;
 }
+@media (min-width: 460px) {
+  .front-sidebar {
+    width: 30.43478%;
+    float: left;
+    margin-right: 4.34783%;
+  }
+}
+@media (min-width: 780px) {
+  .front-sidebar {
+    width: 28.20513%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+}
 @media (min-width: 940px) {
   .front-sidebar {
     margin-bottom: 0;
@@ -1624,37 +1709,6 @@ ul.sidebar-agenda-widget > li {
 
 .pagelink-block {
   margin-bottom: 50px;
-}
-
-.activity-list {
-  -webkit-border-radius: 0 15px;
-  -moz-border-radius: 0 15px;
-  -ms-border-radius: 0 15px;
-  -o-border-radius: 0 15px;
-  border-radius: 0 15px;
-  padding: 1em;
-  background-color: #ed1651;
-}
-.activity-list li {
-  margin-bottom: 10px;
-}
-.activity-list li:last {
-  margin-bottom: 0;
-}
-.activity-list li a {
-  font-size: 14px;
-  line-height: 14px;
-  font-size: 1.4rem;
-  line-height: 1.4rem;
-  color: white;
-  font-weight: bold;
-}
-.activity-list li .the-date {
-  display: inline;
-  font-size: 12px;
-  line-height: 14px;
-  font-size: 1.2rem;
-  line-height: 1.4rem;
 }
 
 .page-template-page-activiteiten-php h2 {
@@ -1673,8 +1727,44 @@ ul.sidebar-agenda-widget > li {
   margin-bottom: 10px;
 }
 
-li.activity-item {
+span a.activity-item-title {
+  color: white;
+}
+span a.activity-item-title:visited {
+  color: white;
+  font-weight: bold;
+}
+
+.activity-list {
+  -webkit-border-radius: 0 15px;
+  -moz-border-radius: 0 15px;
+  -ms-border-radius: 0 15px;
+  -o-border-radius: 0 15px;
+  border-radius: 0 15px;
+  padding: 1em;
+  background-color: #ed1651;
+}
+.activity-list li {
   min-height: 50px;
+  margin-bottom: 10px;
+}
+.activity-list li:last {
+  margin-bottom: 0;
+}
+.activity-list li a {
+  font-size: 14px;
+  line-height: 14px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+.activity-list li .the-date {
+  display: inline;
+  font-size: 12px;
+  line-height: 14px;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }
 
 .activity-label {
@@ -1708,7 +1798,6 @@ li.activity-item {
 
 .site-footer {
   clear: both;
-  min-height: 200px;
   margin-top: 30px;
   padding: 1em;
   -webkit-border-radius: 15px 15px 0 0;
@@ -1721,40 +1810,86 @@ li.activity-item {
   font-weight: bold;
 }
 
-.sitemap,
-.address-stuff {
-  width: 23.40426%;
-  float: left;
-  margin-right: 2.12766%;
-  display: inline;
+.footer-info {
+  margin-bottom: 20px;
+}
+@media (min-width: 780px) {
+  .footer-info {
+    margin-bottom: 0;
+  }
+}
+.footer-info h3 {
+  color: white;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
-.copyright {
+.sitemap,
+.address-stuff {
   width: 100%;
-  float: left;
-  margin-right: 2.12766%;
-  display: inline;
 }
-.copyright span {
-  display: block;
-  text-align: right;
+@media (min-width: 460px) {
+  .sitemap,
+  .address-stuff {
+    width: 47.82609%;
+    float: left;
+    margin-right: 4.34783%;
+  }
+}
+@media (min-width: 940px) {
+  .sitemap,
+  .address-stuff {
+    width: 23.40426%;
+    float: left;
+    margin-right: 2.12766%;
+  }
 }
 
 .links {
-  width: 23.40426%;
-  float: left;
-  margin-right: 2.12766%;
-  display: inline;
+  width: 100%;
+}
+@media (min-width: 460px) {
+  .links {
+    width: 47.82609%;
+    float: left;
+    margin-right: 4.34783%;
+  }
+}
+@media (min-width: 940px) {
+  .links {
+    width: 23.40426%;
+    float: left;
+    margin-right: 2.12766%;
+  }
 }
 .links ul li {
   margin-bottom: 5px;
   padding: 2px 0;
 }
 
-.footer-info h3 {
-  color: white;
-  margin-top: 0;
-  margin-bottom: 10px;
+.copyright {
+  width: 100%;
+}
+@media (min-width: 460px) {
+  .copyright {
+    width: 47.82609%;
+    float: right;
+    margin-right: 0;
+    margin-top: 2em;
+  }
+}
+@media (min-width: 940px) {
+  .copyright {
+    margin-top: 0em;
+  }
+}
+.copyright span {
+  display: block;
+}
+@media (min-width: 940px) {
+  .copyright span {
+    text-align: right;
+  }
 }
 
 .magalielinda {
@@ -1814,6 +1949,20 @@ section.front {
   margin-right: 6.66667%;
   display: inline;
 }
+@media (min-width: 460px) {
+  .events {
+    width: 65.21739%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media (min-width: 780px) {
+  .events {
+    width: 69.23077%;
+    float: right;
+    margin-right: 0;
+  }
+}
 @media (min-width: 940px) {
   .events {
     width: 74.46809%;
@@ -1824,12 +1973,25 @@ section.front {
 .events .event.left {
   margin-bottom: 20px;
 }
+@media (min-width: 780px) {
+  .events .event.left {
+    width: 48%;
+    float: left;
+  }
+}
 @media (min-width: 940px) {
   .events .event.left {
     width: 47.82609%;
     float: left;
     margin-right: 4.34783%;
     margin-bottom: 0px;
+  }
+}
+@media (min-width: 780px) {
+  .events .event.right {
+    width: 48%;
+    float: right;
+    margin-right: 0;
   }
 }
 @media (min-width: 940px) {

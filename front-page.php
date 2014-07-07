@@ -4,14 +4,9 @@
 */
 get_header();
 
-// SLIDER.
-  if ( have_posts() ) : while ( have_posts() ) : the_post();
-  echo do_shortcode("[metaslider id=1843]");
-  endwhile;
-  wp_reset_query();
-  endif;
+echo do_shortcode("[metaslider id=1843]");
 
-  get_sidebar();
+get_sidebar();
 
 ?>
 

@@ -13,9 +13,38 @@
   margin-bottom: 10px;
 }
 
-li.activity-item {
-  min-height: 50px;
+span {
+  a.activity-item-title {
+    color: $white;
+    &:visited {
+      color: $white;
+      font-weight: bold;
+    }
+  }
 }
+.activity-list {
+  @include border-radius(0 15px);
+  padding: 1em;
+  background-color: $red;
+  li {
+    min-height: 50px;
+    margin-bottom: 10px;
+    &:last {
+      margin-bottom: 0;
+    }
+    a {
+      @include font-size(14, 14);
+      font-weight: bold;
+      color: $white;
+      @extend .inverse-link-color;
+    }
+    .the-date {
+      display: inline;
+      @include font-size(12, 14);
+    }
+  }
+}
+
 .activity-label {
   display: table-cell;
   color: red;

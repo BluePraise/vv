@@ -49,6 +49,12 @@ ul.sidebar-agenda-widget {
 .front-sidebar {
   @include span-columns(4);
   margin-bottom: 50px;
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(2, 6);
+  }
+  @include at-breakpoint($tablet) {
+    @include span-columns(3, 10);
+  }
   @include at-breakpoint($desktop) {
     margin-bottom: 0;
     @include span-columns(3,12);
@@ -56,26 +62,4 @@ ul.sidebar-agenda-widget {
 }
 .pagelink-block {
   margin-bottom: 50px;
-}
-
-.activity-list {
-  @include border-radius(0 15px);
-  padding: 1em;
-  background-color: $red;
-  li {
-    margin-bottom: 10px;
-    &:last {
-      margin-bottom: 0;
-    }
-    a {
-      @include font-size(14, 14);
-      color: white;
-      font-weight: bold;
-      @extend .inverse-link-color;
-    }
-    .the-date {
-      display: inline;
-      @include font-size(12, 14);
-    }
-  }
 }

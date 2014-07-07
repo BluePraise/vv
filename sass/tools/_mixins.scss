@@ -60,6 +60,18 @@
   padding: 0;
 }
 
+.span-all-columns {
+  @include span-columns(4);
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(6);
+  }
+  @include at-breakpoint($tablet) {
+    @include span-columns(10);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(12);
+  }
+}
 
 @mixin reset-grid-spacing($reset: true) {
   @if ($reset) {

@@ -9,6 +9,9 @@ get_sidebar( );
 
 <div class="content standard">
   <h1 class="pagetitle orange"><?php the_title(); ?></h1>
+    <?php  if ( ! post_password_required()) :
+    edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );
+    endif; ?>
 
     <table>
       <thead>
@@ -25,6 +28,8 @@ get_sidebar( );
       'category_name'   => 'Event',
       'order'           => 'ASC',
       'orderby'         => 'date',
+      'year'            => 2014,
+      'posts_per_page'  => 100,
       'nopaging'        => false
       );
 
@@ -46,11 +51,7 @@ get_sidebar( );
 
     </tbody>
   </table>
-  <?php
-      if ( ! post_password_required()) :
-    edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );
-    endif;
-?>
+
 </div> <!-- end of contentclass -->
 
 <?php

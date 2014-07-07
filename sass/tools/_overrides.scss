@@ -10,7 +10,7 @@
 
 .inverse-link-color {
   a {
-    color: $white;
+    color: $white !important;
   }
 
   a:focus {
@@ -18,18 +18,18 @@
   }
 
   a:visited {
-    color: $white;
+    color: $white !important;
     .red & {
-      background-color: $red;
+      background-color: $red !important;
     }
     .blue & {
-      background-color: $blue;
+      background-color: $blue !important;
     }
     .darkgreen & {
-      background-color: $darkgreen;
+      background-color: $darkgreen !important;
     }
     .lilac & {
-      background-color: $lilac;
+      background-color: $lilac !important;
     }
   }
 

@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Oswald:700);
 .site-footer {
 	clear: both;
-  min-height: 200px;
+  @extend .span-all-columns;
   margin-top: 30px;
   padding: 1em;
   @include border-radius(15px 15px 0 0);
@@ -10,28 +10,11 @@
   font-weight: bold;
 }
 
-.sitemap,
-.address-stuff {
-  @include span-columns(3 , 12);
-}
-
-.copyright {
-  @include span-columns(12, 12);
-  span {
-    display: block;
-    text-align: right;
-  }
-}
-
-.links {
-  @include span-columns(3 , 12);
-  ul li {
-    margin-bottom: 5px;
-    padding: 2px 0;
-  }
-}
-
 .footer-info {
+  margin-bottom: 20px;
+  @include at-breakpoint($tablet) {
+    margin-bottom: 0;
+  }
   h3 {
     color: $white;
     margin-top: 0;
@@ -39,6 +22,45 @@
   }
 }
 
+.sitemap,
+.address-stuff {
+  width: 100%;
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(3 , 6);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(3 , 12);
+  }
+}
+.links {
+  width: 100%;
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(3 , 6);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(3 , 12);
+  }
+  ul li {
+    margin-bottom: 5px;
+    padding: 2px 0;
+  }
+}
+.copyright {
+  width: 100%;
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(3 omega, 6);
+    margin-top: 2em;
+  }
+  @include at-breakpoint($desktop) {
+    margin-top: 0em;
+  }
+  span {
+    display: block;
+    @include at-breakpoint($desktop) {
+      text-align: right;
+    }
+  }
+}
 .magalielinda {
   font-family: 'Oswald', sans-serif;
   a {

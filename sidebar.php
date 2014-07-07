@@ -9,10 +9,10 @@
   <!-- Start Activiteiten Block -->
   <div class="activiteiten front">
     <div class="section-header red">Recente activiteiten</div>
-    <ul class="activity-list red">
+    <ul class="activity-list">
       <span>
         Binnenkort staat hier een vullende agenda! <br />
-        Nu zijn we druk met de <a href="/zomerschool-2014">Zomerschool!</a>
+        Neem een kijkje bij de <a class="activity-item-title" href="/zomerschool-2014">Zomerschool!</a>
       </span>
     <?php
 

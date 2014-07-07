@@ -41,8 +41,15 @@
 }
 
  .content {
-  @include span-columns(9 omega,12);
-  @include prefix(1,12);
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(4 omega, 6);
+  }
+  @include at-breakpoint($tablet) {
+    @include span-columns(7 omega, 10);
+  }
+  @include at-breakpoint($desktop) {
+    @include span-columns(9 omega,12);
+  }
 }
 
 .site-footer {
