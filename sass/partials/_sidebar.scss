@@ -63,3 +63,9 @@ ul.sidebar-agenda-widget {
 .pagelink-block {
   margin-bottom: 50px;
 }
+
+.widget_sp_image-description {
+  p {
+    @include font-size(12, 44);
+  }
+}

@@ -1711,6 +1711,13 @@ ul.sidebar-agenda-widget > li {
   margin-bottom: 50px;
 }
 
+.widget_sp_image-description p {
+  font-size: 12px;
+  line-height: 44px;
+  font-size: 1.2rem;
+  line-height: 4.4rem;
+}
+
 .page-template-page-activiteiten-php h2 {
   border-bottom: dashed 2px black;
   margin-bottom: 20px;

@@ -125,12 +125,12 @@ function vv_sidebar() {
 
   register_sidebar( array(
     'name'          => __( 'Activity Sidebar', 'vv' ),
-    'id'            => 'sidebar-activity-page',
-    'description'   => __( 'Sidebar voor de activiteiten pagina en standaard pagina', 'text_domain' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</aside>',
-    'before_title'  => '<h3 class="h5 widget-title">',
-    'after_title'   => '</h3>',
+    'id'            => 'sidebar-activity',
+    'description'   => __( 'Sidebar voor de activiteiten', 'text_domain' ),
+    'before_widget' => '<div class="section-header red">Meest recente activiteiten</div><div class="activity-list red">',
+    'after_widget'  => '</div>',
+    'before_title'  => '',
+    'after_title'   => '',
   ) );
 
   register_sidebar( array(
