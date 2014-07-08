@@ -37,12 +37,12 @@ get_sidebar( );
 
     while ( $loop->have_posts() ) : $loop->the_post(); ?>
     <tr>
-          <td><?php the_field('dagdeel'); ?></td>
-          <td><?php the_title(); ?></td>
-          <td><?php the_field('waardebrenger'); ?></td>
-          <td><?php the_field('benodigdheden'); ?></td>
-          <td><?php the_field('kosten'); ?></td>
-      </tr>
+      <td class="event-date"><?php the_field('dagdeel'); ?></td>
+      <td class="event-title"><?php the_title(); ?></td>
+      <td class="event-person"><?php the_field('waardebrenger'); ?></td>
+      <td class="event-materials"><?php the_field('benodigdheden'); ?></td>
+      <td class="event-costs"><?php the_field('kosten'); ?></td>
+    </tr>
 <?php
     endwhile; // End of the loop
     wp_reset_query();

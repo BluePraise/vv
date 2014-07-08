@@ -406,7 +406,6 @@ table {
 	line-height: 2;
 	padding:0px;
   width:100%;
-  // border:1px solid #c9c7c7;
 
   -moz-border-radius-bottomleft:3px;
   -webkit-border-bottom-left-radius:3px;
@@ -456,8 +455,18 @@ tr:nth-child(even){
 	background-color:$white;
 }
 td {
-	width: 120px;
 	border-top: 1px solid #ededed;
+	padding: 0 5px;
+	&.event-date {
+		width: 130px;
+	}
+	&.event-title,
+	&.event-person {
+		width: 200px;
+	}
+	&.event-costs {
+		width: 30px;
+	}
 }
 
 del {

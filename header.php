@@ -39,7 +39,6 @@
 
 				<nav class="main-navigation" role="navigation"><?php vv_menu(); ?></nav>
 
-
 			</header><!-- .site-header -->
 
 		<div id="main" class="site-main" role="main">
