@@ -9,18 +9,13 @@ get_sidebar();
 
 <div class="content lilac">
   <h1 class="pagetitle"><?php the_title(); ?></h1>
-<?php
-  if ( get_post_status ( ) == 'private' ) {
-    echo '<h1>Nothing to display</h1>';
-  } else {
-    the_content();
-  }
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
+        the_content();
+    endwhile;
+    endif;
 
   ?>
 
 </div> <!-- end of contentclass -->
 
-<?php
-get_footer();
-
-?>
+<?php get_footer(); ?>

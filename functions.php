@@ -163,9 +163,9 @@ function vv_sidebar() {
     'after_title'   => '</h3>',
   ) );
   register_sidebar( array(
-    'name'          => __( 'Footer Adres', 'vv' ),
+    'name'          => __( 'Footer Midden', 'vv' ),
     'id'            => 'sidebar-footer-address',
-    'description'   => __( 'Sidebar voor de "Footer Links', 'text_domain' ),
+    'description'   => __( 'Sidebar voor de "Footer Midden', 'text_domain' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h3 class="widget-title">',
@@ -181,9 +181,9 @@ function vv_sidebar() {
     'after_title'   => '</h3>',
   ) );
   register_sidebar( array(
-    'name'          => __( 'Footer Legal Stuff', 'vv' ),
-    'id'            => 'sidebar-footer-legalstuff',
-    'description'   => __( 'Sidebar voor de "Footer Legal Stuff', 'text_domain' ),
+    'name'          => __( 'Footer Links', 'vv' ),
+    'id'            => 'sidebar-footer-links',
+    'description'   => __( 'Sidebar voor de "Footer Links', 'text_domain' ),
     'before_widget' => '<aside id="%1$s" class="widget %2$s">',
     'after_widget'  => '</aside>',
     'before_title'  => '<h3 class="widget-title">',

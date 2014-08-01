@@ -18,12 +18,18 @@ get_sidebar();
     <h3 class="list-title">Dinsdag</h3>
     <ul class="events-list activity-list left">
     <?php
+      $today = date('Ymd');
       $args = array(
         'category'        => 'Event',
         'tag'             => 'dinsdag',
-        'year'            => 2014,
-        'order'           => 'ASC',
         'orderby'         => 'date',
+        'order'           => 'ASC',
+        'meta_query' => array(
+              array(
+          'key'   => 'dagdeel',
+          'compare' => '<',
+          'value'   => $today,
+        )),
         'posts_per_page'  => 9,
         'nopaging'        => false
         );
@@ -35,7 +41,12 @@ get_sidebar();
           <li class="activity-item">
             <div class="activity-date">
               <div class="activity-start-date the-date">
-                  <?php the_field('dagdeel') ?>
+                  <?php
+                    $dateformatstring = "d F";
+                    $unixtimestamp = strtotime(get_field('dagdeel'));
+                    echo date_i18n($dateformatstring, $unixtimestamp);
+                    echo ' 09:30 - 12:30'
+                  ?>
               </div>
             </div>
 
@@ -60,9 +71,14 @@ get_sidebar();
       $args = array(
         'category'        => 'Event',
         'tag'             => 'donderdag',
-        'year'            => 2014,
-        'order'           => 'ASC',
         'orderby'         => 'date',
+        'order'           => 'ASC',
+        'meta_query' => array(
+              array(
+          'key'   => 'dagdeel',
+          'compare' => '<',
+          'value'   => $today,
+        )),
         'posts_per_page'  => 9,
         'nopaging'        => false
         );
@@ -74,7 +90,12 @@ get_sidebar();
           <li class="activity-item">
             <div class="activity-date">
               <div class="activity-start-date the-date">
-                  <?php the_field('dagdeel') ?>
+                 <?php
+                    $dateformatstring = "d F";
+                    $unixtimestamp = strtotime(get_field('dagdeel'));
+                    echo date_i18n($dateformatstring, $unixtimestamp);
+                    echo ' 13:00 - 15:30'
+                  ?>
               </div>
             </div>
 
