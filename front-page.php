@@ -4,118 +4,52 @@
 */
 get_header();
 
-echo do_shortcode("[metaslider id=1843]");
+// echo do_shortcode("[metaslider id=1908]");
 
 get_sidebar();
 
 ?>
 
-
-<!-- Start Special Events Block -->
-<section class="events front">
-  <div class="section-header orange"><a href="<?php echo esc_url( home_url( '/' ) );?>/zomerschool-2014">Zomerschool 2014</a></div>
-  <div class="event left">
-    <h3 class="list-title">Dinsdag</h3>
-    <ul class="events-list activity-list left">
+<div class="content">
+  <div class="news blue">
+    <ul>
     <?php
-      $today = date('Ymd');
-      $args = array(
-        'category'        => 'Event',
-        'tag'             => 'dinsdag',
-        'orderby'         => 'date',
-        'order'           => 'ASC',
-        'meta_query' => array(
-              array(
-          'key'   => 'dagdeel',
-          'compare' => '<',
-          'value'   => $today,
-        )),
-        'posts_per_page'  => 9,
-        'nopaging'        => false
-        );
 
-      $loop = new WP_Query( $args );
+        $args = array(
+          'category_name'   => 'Nieuws',
+          'order'           => 'DESC',
+          'orderby'         => 'date',
+          'posts_per_page'  => 2,
+          'nopaging'        => false
+          );
+
+        $loop = new WP_Query( $args );
 
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-          <li class="activity-item">
-            <div class="activity-date">
-              <div class="activity-start-date the-date">
-                  <?php
-                    $dateformatstring = "d F";
-                    $unixtimestamp = strtotime(get_field('dagdeel'));
-                    echo date_i18n($dateformatstring, $unixtimestamp);
-                    echo ' 09:30 - 12:30'
-                  ?>
-              </div>
+        <li class="teaser teaser-news">
+          <h3 class="teaser-title h4"><a href="<?php the_permalink() ?>"</a><?php the_title();?></a></h3>
+          <div class="teaser-date">Geplaatst op: <?php the_date('j F Y'); ?></div>
+          <div class="teaser-comment-count"><?php printf( _n( '1 reactie', '%1$s reacties', get_comments_number(), 'vv' ),
+          number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?></div>
+          <div class="teaser-container">
+            <div class="teaser-thumbnail">
+              <?php if ( has_post_thumbnail() ) :
+                the_post_thumbnail();
+                else: ?>
+                <a href="<?php the_permalink() ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo.png" /></a>
+              <?php endif; ?>
             </div>
+            <div class="teaser-text"><?php the_content(); ?></div>
+          </div>
 
-            <a class="activity-item-title" href="<?php echo esc_url( home_url( '/' ) );?>/zomerschool-2014"  rel="bookmark">
-                <?php the_title(); ?>
-            </a>
-          </li>
-      <?php
-        endwhile;
-        wp_reset_query();
-        wp_reset_postdata();
-      ?>
-    </ul>
-  </div>
-  <div class="event right">
-
-    <h3 class="list-title last">Donderdag</h3>
-    <ul class="events-list activity-list right">
-    <?php
-      $current_month = date('m');
-
-      $args = array(
-        'category'        => 'Event',
-        'tag'             => 'donderdag',
-        'orderby'         => 'date',
-        'order'           => 'ASC',
-        'meta_query' => array(
-              array(
-          'key'   => 'dagdeel',
-          'compare' => '<',
-          'value'   => $today,
-        )),
-        'posts_per_page'  => 9,
-        'nopaging'        => false
-        );
-
-      $loop = new WP_Query( $args );
-
-        while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-          <li class="activity-item">
-            <div class="activity-date">
-              <div class="activity-start-date the-date">
-                 <?php
-                    $dateformatstring = "d F";
-                    $unixtimestamp = strtotime(get_field('dagdeel'));
-                    echo date_i18n($dateformatstring, $unixtimestamp);
-                    echo ' 13:00 - 15:30'
-                  ?>
-              </div>
-            </div>
-
-            <a class="activity-item-title" href="<?php echo esc_url( home_url( '/' ) );?>/zomerschool-2014" rel="bookmark">
-                <?php the_title(); ?>
-            </a>
-
-          </li>
-      <?php
-        endwhile;
-        wp_reset_query();
-        wp_reset_postdata();
-      ?>
-    </ul>
-  </div>
-    <span class="read-more orange"><a href="<?php echo esc_url( home_url( '/' ) );?>/zomerschool-2014">Klik hier voor het volledige schema</a></span>
-</section>
-
-<?php
-get_footer();
+        </li>
+        <?php
+          endwhile;
+          // wp_reset_postdata();
+          wp_reset_query();
+        ?>
+      </ul>
+  </div> <!-- End of News -->
 
 
-?>
+<?php get_footer(); ?>

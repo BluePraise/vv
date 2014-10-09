@@ -1,3 +1,30 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .content-sidebar {
   @include span-columns(3,12);
   aside {
@@ -35,6 +62,9 @@ ul.sidebar-agenda-widget {
   &.red {
     background-color: $red;
   }
+  &.darkgreen {
+    background-color: $darkgreen;
+  }
   &.lilac {
     background-color: $lilac;
   }
@@ -48,24 +78,6 @@ ul.sidebar-agenda-widget {
       color: $white;
     }
   }
-}
-
-.front-sidebar {
-  @include span-columns(4);
-  margin-bottom: 50px;
-  @include at-breakpoint($wide-mobile) {
-    @include span-columns(2, 6);
-  }
-  @include at-breakpoint($tablet) {
-    @include span-columns(3, 10);
-  }
-  @include at-breakpoint($desktop) {
-    margin-bottom: 0;
-    @include span-columns(3,12);
-  }
-}
-.pagelink-block {
-  margin-bottom: 50px;
 }
 
 .widget_sp_image-description {

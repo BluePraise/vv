@@ -9,43 +9,45 @@ get_sidebar();
 ?>
 
 <div class="content red">
-
-  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-  <h1 class="pagetitle single-activity-title"><?php the_title(); ?></h1>
-
-      <div class="single-image single-activity-image">
-        <?php
-          if ( has_post_thumbnail() ) {
-            the_post_thumbnail('artikel_middle_view');
-          }?>
-      </div>
+  <article <?php post_class(); ?> >
+  <header class="article-header">
+    <h1 class="article-title pagetitle"><?php the_title(); ?></h1>
+  </header>
+<?php
+    if ( ! post_password_required()) :
+      edit_post_link( __( 'Bewerk deze activiteit', '' ), '<span class="edit-link">', '</span>' );
+      endif;
+      if (have_posts()) : while (have_posts()) : the_post();?>
       <div class="activity-info activity-date">
-        <div class="activity-label">Datum:</div>
-        <div class="activity-start-date the-date"> <span>van:</span> <?php the_field('begintijd') ?> </div>
-        <div class="activity-end-date the-date"> <span>tot:</span> <?php the_field('eindtijd') ?> </div>
+        <div class="activity-label">Wanneer: </div>
+        <div class="activity-start-date the-date"><span> <?php the_field('activiteit_begindatum'); ?> <?php the_field('activiteit_begintijd') ?> - <?php the_field('activiteit_eindtijd') ?> </span></div>
       </div>
       <div class="activity-info activity-persons">
         <div class="activity-label">Wie:</div>
-        <div class="activity-person"><?php the_field('activiteiten_persoon') ?> </div>
+        <div class="activity-person"><?php the_field('activiteit_contactpersoon') ?> </div>
       </div>
-      <?php the_content();
-
-      if ( ! post_password_required()) :
-      edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );
-      endif;
-
-  endwhile;
-?>
-
-
-  <?php comments_template(); ?>
+      <div class="activity-info activity-locations">
+        <div class="activity-label">Waar:</div>
+        <div class="activity-location"><?php the_field('activiteit_lokatie') ?> </div>
+      </div>
+       <div class="single-image single-activity-image">
+        <?php
+          if ( has_post_thumbnail() ) {
+            the_post_thumbnail('artikel_middle_view');
+          }
+          ?>
+      </div>
+      <div class="activity-content">
+      <?php
+        the_content();
+        comments_template();
+        endwhile;
+        endif;
+        ?>
+    </div><!-- end of activitycontent -->
+  </article>
 </div> <!-- end of contentclass -->
 
+<?php get_footer(); ?>
 
-</div> <!-- end of contentclass -->
-<?php
-endif;
-get_footer();
-?>
 

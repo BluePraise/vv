@@ -11,6 +11,13 @@ if ( ! isset( $content_width ) )
 
 function launch_this_theme() {
 
+  remove_filter( 'excerpt_more', 'twentyeleven_auto_excerpt_more' );
+  remove_filter( 'get_the_excerpt', 'twentyeleven_custom_excerpt_more' );
+  remove_filter( 'excerpt_length', 'custom_excerpt_length' );
+  add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+  remove_filter( 'excerpt_length', 'front_page_excerpt_length' );
+  add_filter( 'excerpt_length', 'front_page_excerpt_length', 999 );
+
 }
 
 remove_action( 'wp_head', 'wp_generator'); // Display the XHTML generator that is generated on the wp_head hook, WP version
@@ -23,7 +30,6 @@ remove_action( 'wp_head', 'parent_post_rel_link', 10); // prev link
 remove_action( 'wp_head', 'start_post_rel_link', 10); // start link
 remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10); // Display relational links for the posts adjacent to the current post.
 remove_action( 'wp_head', 'wp_generator'); // Display the XHTML generator that is generated on the wp_head hook, WP version
-
 
 function remove_wp_ver_css_js( $src ) {
     if ( strpos( $src, 'ver=' ) )
@@ -92,9 +98,34 @@ add_image_size( 'slider_size', 1040, 333 , true );
 // add_image_size( 'featured_image', 649, 150, true );
 
 
+// the top menu
+function vv_top_menu(){
+  $topmenu =
+    array(
+      'theme_location'  => 'top-menu',
+      'menu'            => 'top-menu',
+      'container'       => false,
+      'container_class' => '',
+      'container_id'    => '',
+      'menu_class'      => 'top-menu',
+      'menu_id'         => '',
+      'echo'            => true,
+      'fallback_cb'     => 'wp_page_menu',
+      'before'          => '',
+      'after'           => '',
+      'link_before'     => '',
+      'link_after'      => '',
+      'items_wrap'      => '<ul>%3$s</ul>',
+      'depth'           => 0,
+      'walker'          => ''
+    );
+      wp_nav_menu( $topmenu );
+  }
+
+
 // the main menu
-function vv_menu(){
-  wp_nav_menu(
+function vv_main_menu(){
+  $mainmenu =
     array(
       'theme_location'  => 'main-menu',
       'menu'            => 'main-menu',
@@ -112,55 +143,87 @@ function vv_menu(){
       'items_wrap'      => '<ul>%3$s</ul>',
       'depth'           => 0,
       'walker'          => ''
-    ));
-  } /* end mayconnect main nav */
+    );
+      wp_nav_menu( $mainmenu );
+  }
+
+function vv_side_menu() {
+  $sidemenu =
+    array(
+      'theme_location'  => 'side-menu',
+      'menu'            => 'side-menu',
+      'container'       => false,
+      'container_class' => '',
+      'container_id'    => '',
+      'menu_class'      => 'side-menu',
+      'menu_id'         => '',
+      'echo'            => true,
+      'fallback_cb'     => '',
+      'before'          => '',
+      'after'           => '',
+      'link_before'     => '',
+      'link_after'      => '',
+      'items_wrap'      => '<ul>%3$s</ul>',
+      'depth'           => 0,
+      'walker'          => ''
+    );
+  wp_nav_menu( $sidemenu );
+}
 
 function register_vv_menu() {
   register_nav_menus(array( // Using array to specify more menus if needed
-    'main-menu' => __('Main Menu', 'classy'), // Main Navigation
-    // 'sidebar-menu' => __('Sidebar Menu', 'classy'), // Sidebar Navigation
-    // 'extra-menu' => __('Extra Menu', 'classy') // Extra Navigation if needed (duplicate as many as you need!)
+    'top-menu' => __('Top Menu', 'vv'), // Top Navigation
+    'main-menu' => __('Main Menu', 'vv'), // Main Navigation
+    'side-menu' => __('Side Menu', 'vv'), // Sidebar Navigation
   ));
 }
 add_action( 'init', 'register_vv_menu' );
 
 function vv_sidebar() {
   register_sidebar( array(
-    'name'          => __( 'Single Post Sidebar', 'vv' ),
-    'id'            => 'sidebar-single-post',
-    'description'   => __( 'Sidebar that goes on the article view', 'text_domain' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</aside>',
-    'before_title'  => '<h3 class=" h5 widget-title">',
-    'after_title'   => '</h3>',
-  ) );
-  register_sidebar( array(
-    'name'          => __( 'Search Sidebar', 'vv' ),
-    'id'            => 'sidebar-search',
-    'description'   => __( 'Sidebar met de zoekbalk', 'text_domain' ),
-    'before_widget' => '<div class="pagelink orange">Zoeken</div><div class="search-block red">',
+    'name'          => __( 'Sidebar Sitewide', 'vv' ),
+    'id'            => 'sidebar-sitewide',
+    'description'   => __( 'Sidebar for the whole site', 'text_domain' ),
+    'before_widget' => '<div id="%1$s" class="sidebar-sitewide widget %2$s">',
     'after_widget'  => '</div>',
-    'before_title'  => '',
-    'after_title'   => '',
+    'before_title'  => '<div class="pagelink orange">',
+    'after_title'   => '</div>',
   ) );
   register_sidebar( array(
-    'name'          => __( 'Activity Sidebar', 'vv' ),
+    'name'          => __( 'Nieuws Pagina Sidebar', 'vv' ),
+    'id'            => 'sidebar-news',
+    'description'   => __( 'Nieuws Pagina Sidebar', 'text_domain' ),
+    'before_widget' => '<div id="%1$s" class="sidebar-news widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<div class="pagelink orange">',
+    'after_title'   => '</div>',
+  ) );
+  register_sidebar( array(
+    'name'          => __( 'Blog Pagina Sidebar', 'vv' ),
+    'id'            => 'sidebar-blog',
+    'description'   => __( 'Blog Pagina Sidebar', 'text_domain' ),
+    'before_widget' => '<div id="%1$s" class="sidebar-blog widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<div class="pagelink">',
+    'after_title'   => '</div>',
+  ) );
+  register_sidebar( array(
+    'name'          => __( 'Activiteiten Pagina Sidebar', 'vv' ),
     'id'            => 'sidebar-activity',
-    'description'   => __( 'Sidebar voor de activiteiten', 'text_domain' ),
-    'before_widget' => '<div class="section-header red">Meest recente activiteiten</div><div class="activity-list red">',
-    'after_widget'  => '</div>',
+    'description'   => __( 'Sidebar voor de Activiteiten Pagina', 'text_domain' ),
+    'before_widget' => '',
+    'after_widget'  => '',
     'before_title'  => '',
     'after_title'   => '',
   ) );
-
   register_sidebar( array(
-    'name'          => __( 'Zet Ons In  Sidebar', 'vv' ),
-    'id'            => 'sidebar-zetonsin-page',
-    'description'   => __( 'Sidebar voor de "Zet Ons In" pagina', 'text_domain' ),
-    'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</aside>',
-    'before_title'  => '<h3 class="widget-title">',
-    'after_title'   => '</h3>',
+    'name'          => __( 'Second Left Sidebar', 'vv' ),
+    'id'            => 'second-left-sidebar',
+    'description'   => __( 'Sidebar Links Midden', 'text_domain' ),
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '<div class="pagelink blue">',
+    'after_title'   => '</div>',
   ) );
   register_sidebar( array(
     'name'          => __( 'Footer Midden', 'vv' ),
@@ -192,11 +255,24 @@ function vv_sidebar() {
 }
 add_action( 'widgets_init', 'vv_sidebar' );
 
+function custom_excerpt_length( $length ) {
+  return 20;
+}
+
+function page_overview_excerpt_length( $length ) {
+  return 40;
+}
+add_filter( 'excerpt_length', 'page_overview_excerpt_length', 999 );
+
+function front_page_excerpt_length( $length ) {
+  return 10;
+}
 
 // Replaces the excerpt "more" text by a link
-function activity_overview_excerpt_more($more) {
+function overview_excerpt_more($more) {
   global $post;
-  return '<a class="moretag" href="'. get_permalink($post->ID) . '"> Lees meer...</a>';
+  return '<a class="pagelink moretag" href="'. get_permalink($post->ID) . '"> Lees meer</a>';
 }
-add_filter('excerpt_more', 'activity_overview_excerpt_more');
+add_filter('excerpt_more', 'overview_excerpt_more');
+
 ?>

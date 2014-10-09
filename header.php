@@ -37,7 +37,7 @@
 					<a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Vitale Verbindingen</a>
 				</h1>
 
-				<nav class="main-navigation" role="navigation"><?php vv_menu(); ?></nav>
+				<nav class="top-navigation" role="navigation"><?php vv_top_menu(); ?></nav>
 
 			</header><!-- .site-header -->
 

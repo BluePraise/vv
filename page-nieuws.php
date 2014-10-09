@@ -7,41 +7,50 @@ get_sidebar('nieuws');
 
 ?>
 
-<div class="content blue">
-  <h1 class="pagetitle"><?php the_title(); ?></h1>
+<div class="content page-overview news blue">
+  <h2 class="pagetitle"><?php the_title(); ?></h2>
+  <ul>
   <?php
+    if ( ! post_password_required()) :
+    edit_post_link( __( 'Pas deze pagina aan', '' ), '<span class="page-overview-edit-link edit-link">', '</span>' );
+    endif;
+
     $args = array(
       'category_name'   => 'Nieuws',
-      'order'           => 'ASC',
+      'order'           => 'DESC',
       'orderby'         => 'date',
       'year'            => 2014,
-      'posts_per_page'  => 12,
+      'posts_per_page'  => 14,
       'nopaging'        => false
       );
 
     $loop = new WP_Query( $args );
 
-    while ( $loop->have_posts() ) : $loop->the_post(); ?>
-    <article class="teaser teaser-news">
+    while ( $loop->have_posts() ) : $loop->the_post();
+  ?>
+    <li class="teaser teaser-news">
       <div class="teaser-thumbnail">
-        <?php if ( has_post_thumbnail() ) :
-           the_post_thumbnail();
-            else:
-              echo '<img src="' . get_bloginfo( 'stylesheet_directory' ) . '/images/logo.png" />';
-            endif; ?>
+        <?php if ( has_post_thumbnail() ) : ?>
+          <?php the_post_thumbnail(); ?>
+        <?php else: ?>
+          <a href="<?php the_permalink() ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/images/logo.png" /></a>
+        <?php endif; ?>
       </div>
-      <div class="teaser-text"><?php the_excerpt();?></div>
+      <div class="teaser-container">
+        <h3 class="teaser-title"><a href="<?php the_permalink() ?>"</a><?php the_title();?></a></h3>
+        <div class="teaser-date">Geplaatst op: <?php the_date('j F Y'); ?></div>
+        <div class="teaser-text"><?php the_excerpt();?></div>
+        <!-- <div class="read-more"><a class="icon-read-more" href="<?php //the_permalink(); ?>">Lees meer</a></div> -->
+      </div>
 
-    </article>
-    <?php endwhile; // End of the loop ?>
-    <?php wp_reset_query();
+    </li>
+  <?php
+    endwhile; // End of the loop
+    wp_reset_query();
     wp_reset_postdata();
+  ?>
+</ul>
 
-if ( ! post_password_required()) :
-  edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );
-endif;
-
-?>
 </div> <!-- end of contentclass -->
 
 <?php get_footer(); ?>

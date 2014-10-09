@@ -40,7 +40,21 @@
 	}
 }
 
- .content {
+.main-sidebar {
+  @include span-columns(4);
+  margin-bottom: 50px;
+  @include at-breakpoint($wide-mobile) {
+    @include span-columns(2, 6);
+  }
+  @include at-breakpoint($tablet) {
+    @include span-columns(3, 10);
+  }
+  @include at-breakpoint($desktop) {
+    margin-bottom: 0;
+    @include span-columns(3,12);
+  }
+}
+.content {
   @include at-breakpoint($wide-mobile) {
     @include span-columns(4 omega, 6);
   }
