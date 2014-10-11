@@ -2,10 +2,14 @@
   @include font-size(16, 16);
   position: relative;
   color: #F0F0F0;
+  border-top: 2px solid #F0F0F0;
+  margin-top: 50px;
+  .pagelink.orange {
+    margin-top: 30px;
+  }
   .search-field {
     font-family: 'Colaborate-Light';
     max-width: 160px;
-    margin-top: 30px;
     margin-bottom: 5px;
     padding: 0 70px 0 10px;
     border-radius: 4px;
@@ -13,7 +17,8 @@
   .search-icon {
     position: absolute;
     color: #939393;
-    top: 41px;
+    // top: 41px;
+    top: 96px;
     left: 210px;
     &:before {
       font-family: 'icomoon';

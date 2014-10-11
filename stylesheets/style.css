@@ -1614,11 +1614,15 @@ h1.site-title a.logo {
   line-height: 1.6rem;
   position: relative;
   color: #F0F0F0;
+  border-top: 2px solid #F0F0F0;
+  margin-top: 50px;
+}
+.widget_search .pagelink.orange {
+  margin-top: 30px;
 }
 .widget_search .search-field {
   font-family: 'Colaborate-Light';
   max-width: 160px;
-  margin-top: 30px;
   margin-bottom: 5px;
   padding: 0 70px 0 10px;
   border-radius: 4px;
@@ -1626,7 +1630,7 @@ h1.site-title a.logo {
 .widget_search .search-icon {
   position: absolute;
   color: #939393;
-  top: 41px;
+  top: 96px;
   left: 210px;
 }
 .widget_search .search-icon:before {
