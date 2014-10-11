@@ -4,11 +4,12 @@
 */
 get_header();
 
-// echo do_shortcode("[metaslider id=1908]");
-
-get_sidebar();
+echo do_shortcode("[metaslider id=2325]");
 
 ?>
+<div id="main" class="site-main" role="main">
+
+<?php get_sidebar(); ?>
 
 <div class="content">
   <div class="news blue">

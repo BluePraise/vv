@@ -26,8 +26,8 @@ $legacy-support-for-ie7 : $legacy-support-for-ie;
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$base-font-size:   12; // The font size set on the root html element.
-$base-line-height: 18; // This line-height determines the basic unit of vertical rhythm.
+$base-font-size:   14; // The font size set on the root html element.
+$base-line-height: 20; // This line-height determines the basic unit of vertical rhythm.
 
 $h1-font-size: 2          * $base-font-size;
 $h2-font-size: 1.5        * $base-font-size;
@@ -77,8 +77,6 @@ $header-font:        $colabReg;
 //$font-monospace:   $courier;
 //$form-font-family: $istok;
 
-$base-font-size: 14px;
-$base-line-height: 22px;
 
 // Colors, etc.
 $mainColor      : #000;

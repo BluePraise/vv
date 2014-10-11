@@ -1,7 +1,6 @@
 .metaslider {
-  margin-bottom: 30px;
-  border: 4px $orange solid;
-  @include border-radius(0 15px);
+  float: left;
+  margin-bottom: 50px;
   .caption-wrap {
     @include border-radius(0 0 15px 15px);
     text-align: right;
@@ -19,8 +18,8 @@
 }
 .slides {
   li img {
-    @include border-radius(0 15px);
-    height: 332px;
+    @include border-radius(15px);
+    // max-height: 300px;
   }
 }
 
@@ -30,6 +29,9 @@ ol.flex-control-paging {
   bottom: 50px;
   left: 400px
   li a {
-    background: $orange;
+    background: $white;
   }
+}
+.flex-active {
+  background: $orange;
 }

@@ -31,9 +31,10 @@
 }
 
 #main {
-  clear: both;
-	overflow: hidden;
   @include font-size();
+  width: 100%;
+  float: left;
+  margin-top: 50px;
   margin-bottom: 20px;
 	.category-work & {
 		margin-top: 10px;
@@ -132,7 +133,7 @@
   &:before {
     display: inline-block;
     font-family: 'icomoon';
-    content: "\e601";
+    content: "\e606";
     margin-right: 10px;
   }
 }

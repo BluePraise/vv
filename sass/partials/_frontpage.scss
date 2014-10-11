@@ -1,6 +1,3 @@
-.home.content {
-  // @include pre(1,9);
-}
 .teaser-news {
   @include at-breakpoint($desktop) {
     @include span-columns(4, 9);
