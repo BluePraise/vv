@@ -3,7 +3,7 @@
 * Template Name: Nieuws Page
 */
 get_header();
-get_sidebar('nieuws');
+get_sidebar('');
 
 ?>
 

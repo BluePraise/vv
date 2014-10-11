@@ -8,5 +8,6 @@
     endif;
   ?>
 </nav>
+  <?php //get_search_form( $form ); ?>
    <?php dynamic_sidebar( 'sidebar-sitewide' ); ?>
 </aside>

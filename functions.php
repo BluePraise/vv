@@ -96,6 +96,8 @@ add_theme_support( 'post-thumbnails' );
 // set_post_thumbnail_size( 1040, 332  ); // Unlimited height, soft crop
 add_image_size( 'slider_size', 1040, 333 , true );
 // add_image_size( 'featured_image', 649, 150, true );
+//
+add_theme_support( 'html5', array( 'search-form' ) );
 
 
 // the top menu
@@ -274,5 +276,19 @@ function overview_excerpt_more($more) {
   return '<a class="pagelink moretag" href="'. get_permalink($post->ID) . '"> Lees meer</a>';
 }
 add_filter('excerpt_more', 'overview_excerpt_more');
+
+function vv_search_form( $form ) {
+  $form = '<form role="search" method="get" class="search-form" action="' . home_url( '/' ) . '" >
+  <label>
+    <span class="screen-reader-text"></span>
+  <span class="search-icon"></span>
+  <input type="search" class="search-field" placeholder="'. esc_attr__( 'Zoeken…', 'placeholder' ) . '" value="' . get_search_query() . '" name="s" title="' . esc_attr_x( 'Search for:', 'label' ) . '" />
+  <input type="submit" class="search-submit" value='. esc_attr__( 'Search', 'submit button'). '" />
+  </form>';
+
+  return $form;
+}
+
+add_filter( 'get_search_form', 'vv_search_form' );
 
 ?>

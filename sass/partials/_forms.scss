@@ -28,6 +28,16 @@ textarea {
   border: 2px solid $grey-light;
   box-shadow: none;
   height: 35px;
+  outline: none;
+}
+
+input,
+textarea {
+  @include transition(border-color 1s);
+  border: 2px solid $grey-light;
+  &:focus {
+    border-color: rgba(250, 164, 26, 1);
+  }
 }
 
 label {
@@ -49,12 +59,12 @@ input[type="button"] {
   display: block;
   width: 200px;
   background: none;
+  @include transition-property(backround-color);
+  @include transition-duration(0.2s);
+  @include transition-timing-function(ease);
   @include border-radius(15px 0);
   &:hover,
   &:active {
-    @include transition-property(backround-color);
-    @include transition-duration(0.2s);
-    @include transition-timing-function(ease);
     color: $white;
   }
 }
