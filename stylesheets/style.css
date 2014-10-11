@@ -161,43 +161,6 @@ a:hover {
   outline: 0;
 }
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
-/*
- * Addresses font sizes and margins set differently in IE6/7.
- * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
- */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0;
-}
-
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
-}
-
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
-}
-
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0;
-}
-
-h6 {
-  font-size: 0.75em;
-  margin: 2.33em 0;
-}
-
 /*
  * Addresses styling not present in IE7/8/9, S5, Chrome.
  */
@@ -805,12 +768,14 @@ h3, .h3 {
   line-height: 28px;
   font-size: 2.8rem;
   line-height: 2.8rem;
-  margin: 22px 0;
+  margin-top: 0;
+  margin-bottom: 22px;
 }
 
 h4, .h4 {
   font-size: 20px;
-  margin: 25px 0;
+  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 h5, .h5 {
@@ -1816,7 +1781,7 @@ span a.activity-item-title:visited {
 
 .site-footer {
   clear: both;
-  margin-top: 30px;
+  margin-top: 100px;
   padding: 1em;
   -webkit-border-radius: 15px 15px 0 0;
   -moz-border-radius: 15px 15px 0 0;
@@ -1917,33 +1882,37 @@ span a.activity-item-title:visited {
   color: #67c6b4;
 }
 
-section.front {
-  padding: 0;
+@media (min-width: 940px) {
+  .teaser-news {
+    width: 42.85714%;
+    float: left;
+    margin-right: 2.85714%;
+    margin-right: -100%;
+    margin-left: 11.42857%;
+  }
+  .teaser-news:nth-child(2) {
+    float: right;
+    margin-right: 0;
+  }
 }
 
-.section-header {
-  font-size: 16px;
-  line-height: 44px;
-  font-size: 1.6rem;
-  line-height: 4.4rem;
-  -webkit-border-radius: 0 15px;
-  -moz-border-radius: 0 15px;
-  -ms-border-radius: 0 15px;
-  -o-border-radius: 0 15px;
-  border-radius: 0 15px;
-  margin-bottom: 10px;
-  font-weight: bold;
-  padding: 0 1em;
-  color: white;
+.teaser-title {
+  text-align: center;
 }
-.section-header a {
-  color: white;
+
+.teaser-thumbnail {
+  padding-bottom: 20px;
+  text-align: center;
 }
-.section-header.red {
-  background-color: #ed1651;
+.teaser-thumbnail a {
+  display: block;
 }
-.section-header.orange {
-  background-color: #faa41a;
+
+.teaser-text {
+  float: left;
+  border-bottom: 2px solid #F0F0F0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .list-title {
@@ -1959,69 +1928,6 @@ section.front {
   -o-border-radius: 0 15px;
   border-radius: 0 15px;
   color: #faa41a;
-}
-
-.events {
-  width: 100%;
-  float: left;
-  margin-right: 6.66667%;
-  display: inline;
-}
-@media (min-width: 460px) {
-  .events {
-    width: 65.21739%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 780px) {
-  .events {
-    width: 69.23077%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 940px) {
-  .events {
-    width: 74.46809%;
-    float: right;
-    margin-right: 0;
-  }
-}
-.events .event.left {
-  margin-bottom: 20px;
-}
-@media (min-width: 780px) {
-  .events .event.left {
-    width: 48%;
-    float: left;
-  }
-}
-@media (min-width: 940px) {
-  .events .event.left {
-    width: 47.82609%;
-    float: left;
-    margin-right: 4.34783%;
-    margin-bottom: 0px;
-  }
-}
-@media (min-width: 780px) {
-  .events .event.right {
-    width: 48%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 940px) {
-  .events .event.right {
-    width: 47.82609%;
-    float: right;
-    margin-right: 0;
-  }
-}
-
-.events-list {
-  background-color: #faa41a;
 }
 
 span.read-more {

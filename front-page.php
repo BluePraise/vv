@@ -14,11 +14,12 @@ get_sidebar();
   <div class="news blue">
     <ul>
     <?php
-
+        $sticky = get_option( 'sticky_posts' );
         $args = array(
           'category_name'   => 'Nieuws',
           'order'           => 'DESC',
           'orderby'         => 'date',
+          'post__in'        => get_option( 'sticky_posts' ),
           'posts_per_page'  => 2,
           'nopaging'        => false
           );
@@ -28,9 +29,6 @@ get_sidebar();
         while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <li class="teaser teaser-news">
           <h3 class="teaser-title h4"><a href="<?php the_permalink() ?>"</a><?php the_title();?></a></h3>
-          <div class="teaser-date">Geplaatst op: <?php the_date('j F Y'); ?></div>
-          <div class="teaser-comment-count"><?php printf( _n( '1 reactie', '%1$s reacties', get_comments_number(), 'vv' ),
-          number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?></div>
           <div class="teaser-container">
             <div class="teaser-thumbnail">
               <?php if ( has_post_thumbnail() ) :

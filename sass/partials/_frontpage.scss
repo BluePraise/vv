@@ -1,23 +1,31 @@
-section.front {
-  padding: 0;
+.home.content {
+  // @include pre(1,9);
+}
+.teaser-news {
+  @include at-breakpoint($desktop) {
+    @include span-columns(4, 9);
+    @include isolate(2,9);
+    @include nth-omega(2);
+  }
 }
 
-.section-header {
-  @include font-size(16,44);
-  @include border-radius(0 15px);
-  margin-bottom: 10px;
-  font-weight: bold;
-  padding: 0 1em;
-  color: $white;
+.teaser-title {
+  text-align: center;
+}
+
+.teaser-thumbnail {
+  padding-bottom: 20px;
+  text-align: center;
   a {
-    color: $white;
+    display: block;
   }
-  &.red {
-    background-color: $red;
-  }
-  &.orange {
-    background-color: $orange;
-  }
+}
+
+.teaser-text {
+  float: left;
+  border-bottom: 2px solid #F0F0F0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .list-title {
@@ -26,44 +34,6 @@ section.front {
   @include font-size(28,44);
   @include border-radius(0 15px);
   color: $orange;
-}
-
-.events {
-  @include span-columns(4);
-  @include at-breakpoint($wide-mobile) {
-    @include span-columns(4 omega, 6);
-  }
-  @include at-breakpoint($tablet) {
-    @include span-columns(7 omega, 10);
-  }
-  @include at-breakpoint($desktop) {
-    @include span-columns(9 omega,12);
-  }
-  .event {
-    &.left {
-      margin-bottom: 20px;
-      @include at-breakpoint($tablet) {
-        width: 48%;
-        float: left;
-      }
-      @include at-breakpoint($desktop) {
-        @include span-columns(3,6);
-        margin-bottom: 0px;
-      }
-    }
-    &.right {
-      @include at-breakpoint($tablet) {
-        width: 48%;
-        @include omega;
-      }
-      @include at-breakpoint($desktop) {
-        @include span-columns(3 omega, 6);
-      }
-    }
-  }
-}
-.events-list {
-  background-color: $orange;
 }
 
 span.read-more {
