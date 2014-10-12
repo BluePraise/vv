@@ -39,8 +39,10 @@ get_sidebar('');
       <div class="teaser-container">
         <h3 class="teaser-title"><a href="<?php the_permalink() ?>"</a><?php the_title();?></a></h3>
         <div class="teaser-date">Geplaatst op: <?php the_date('j F Y'); ?></div>
+        <div class="teaser-comment-count"><?php printf( _n( '1 reactie', '%1$s reacties', get_comments_number(), 'vv' ),
+          number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
+        </div>
         <div class="teaser-text"><?php the_excerpt();?></div>
-        <!-- <div class="read-more"><a class="icon-read-more" href="<?php //the_permalink(); ?>">Lees meer</a></div> -->
       </div>
 
     </li>

@@ -1,29 +1,30 @@
-.teaser-news {
-  @include at-breakpoint($desktop) {
+.home {
+  .teaser-news {
+    @include at-breakpoint($desktop) {
     @include span-columns(4, 9);
     @include isolate(2,9);
     @include nth-omega(2);
+    }
+  }
+  .teaser-title {
+    text-align: center;
+  }
+  .teaser-thumbnail {
+    padding-bottom: 20px;
+    text-align: center;
+    a {
+      display: block;
+    }
+  }
+  .teaser-text {
+    float: left;
+    border-bottom: 2px solid #F0F0F0;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 }
 
-.teaser-title {
-  text-align: center;
-}
 
-.teaser-thumbnail {
-  padding-bottom: 20px;
-  text-align: center;
-  a {
-    display: block;
-  }
-}
-
-.teaser-text {
-  float: left;
-  border-bottom: 2px solid #F0F0F0;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-}
 
 .list-title {
   margin-top: 0;

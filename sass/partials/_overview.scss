@@ -1,0 +1,44 @@
+.page-overview {
+  .teaser {
+    &.teaser-blog {
+      border: 4px solid $darkgreen;
+    }
+    &.teaser-news {
+      border: 4px solid $blue;
+    }
+    float: left;
+    margin-bottom: 20px;
+    padding: 1em 0;
+    @include border-radius(0 15px);
+  }
+  .teaser-thumbnail {
+    @include span-columns(3,9);
+    padding-left: 1em;
+  }
+  .teaser-container {
+    @include span-columns(6 omega, 9);
+  }
+}
+
+.teaser-comment-count {
+  margin-top: 5px;
+  color: #8E8E8E;
+  vertical-align: top;
+  &:before {
+    @extend %font-icons;
+    font-size: 18px;
+    content: "\e620";
+    margin-right: 5px;
+  }
+}
+
+.teaser-date {
+  color: #8E8E8E;
+  vertical-align: top;
+  &:before {
+    @extend %font-icons;
+    font-size: 18px;
+    content: "\e63f";
+    margin-right: 5px;
+  }
+}
