@@ -8,12 +8,10 @@
 get_header();
 //135
 
+get_sidebar();
 in_category(135)
 ?>
 
-<div class="content-sidebar blue widget-area" role="complementary">
-    <?php dynamic_sidebar( 'sidebar-single-post' ); ?>
-</div><!-- #content-sidebar -->
 <?php
 $class_names = array(
     'blue',

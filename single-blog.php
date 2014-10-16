@@ -7,13 +7,11 @@
 
 get_header();
 //135
-
-in_category(135)
+get_sidebar();
+in_category(135);
 ?>
 
-<div class="content-sidebar darkgreen widget-area" role="complementary">
-    <?php dynamic_sidebar( 'sidebar-single-post' ); ?>
-</div><!-- #content-sidebar -->
+
 <?php
 $class_names = array(
     'darkgreen',
