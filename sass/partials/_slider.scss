@@ -1,6 +1,7 @@
 .metaslider {
   float: left;
   margin-bottom: 50px;
+  max-height: 300px;
   .caption-wrap {
     @include border-radius(0 0 15px 15px);
     text-align: right;
@@ -13,13 +14,13 @@
   position: relative;
   margin: 0 !important;
   .flex-viewport {
-    height: 333px;
+    // height: 333px;
   }
 }
 .slides {
   li img {
     @include border-radius(15px);
-    // max-height: 300px;
+    max-height: 300px;
   }
 }
 

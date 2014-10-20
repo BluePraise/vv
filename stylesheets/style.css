@@ -2095,6 +2095,7 @@ select {
 .metaslider {
   float: left;
   margin-bottom: 50px;
+  max-height: 300px;
 }
 .metaslider .caption-wrap {
   -webkit-border-radius: 0 0 15px 15px;
@@ -2112,9 +2113,6 @@ select {
   position: relative;
   margin: 0 !important;
 }
-.flexslider .flex-viewport {
-  height: 333px;
-}
 
 .slides li img {
   -webkit-border-radius: 15px;
@@ -2122,6 +2120,7 @@ select {
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   border-radius: 15px;
+  max-height: 300px;
 }
 
 ol.flex-control-paging {
