@@ -27,14 +27,14 @@ This theme, like WordPress, is licensed under the GPL.
   overflow: hidden;
 }
 
-.span-all-columns, .site-footer {
+.span-all-columns {
   width: 100%;
   float: left;
   margin-right: 6.66667%;
   display: inline;
 }
 @media (min-width: 300px) {
-  .span-all-columns, .site-footer {
+  .span-all-columns {
     width: 153.33333%;
     float: left;
     margin-right: 6.66667%;
@@ -42,7 +42,7 @@ This theme, like WordPress, is licensed under the GPL.
   }
 }
 @media (min-width: 300px) {
-  .span-all-columns, .site-footer {
+  .span-all-columns {
     width: 260%;
     float: left;
     margin-right: 6.66667%;
@@ -50,7 +50,7 @@ This theme, like WordPress, is licensed under the GPL.
   }
 }
 @media (min-width: 300px) {
-  .span-all-columns, .site-footer {
+  .span-all-columns {
     width: 313.33333%;
     float: left;
     margin-right: 6.66667%;
@@ -1799,7 +1799,8 @@ span a.activity-item-title:visited {
 }
 
 .site-footer {
-  clear: both;
+  float: left;
+  width: 100%;
   margin-top: 100px;
   padding: 1em;
   -moz-border-radius: 15px 15px 0 0;

@@ -1,6 +1,6 @@
 .site-footer {
-	clear: both;
-  @extend .span-all-columns;
+	float: left;
+  width: 100%;
   margin-top: 100px;
   padding: 1em;
   @include border-radius(15px 15px 0 0);
