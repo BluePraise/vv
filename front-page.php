@@ -4,7 +4,7 @@
 */
 get_header();
 
-echo do_shortcode("[metaslider id=2325]");
+echo do_shortcode("[metaslider id=2316]");
 
 ?>
 <div id="main" class="site-main" role="main">
@@ -44,11 +44,12 @@ echo do_shortcode("[metaslider id=2325]");
         </li>
         <?php
           endwhile;
-          // wp_reset_postdata();
-          wp_reset_query();
+          wp_reset_postdata();
+          // wp_reset_query();
         ?>
       </ul>
   </div> <!-- End of News -->
+</div> <!-- End of Content -->
 
 
 <?php get_footer(); ?>

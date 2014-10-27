@@ -17,6 +17,7 @@ function launch_this_theme() {
   add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
   remove_filter( 'excerpt_length', 'front_page_excerpt_length' );
   add_filter( 'excerpt_length', 'front_page_excerpt_length', 999 );
+
 }
 
 remove_action( 'wp_head', 'wp_generator'); // Display the XHTML generator that is generated on the wp_head hook, WP version
@@ -35,19 +36,17 @@ function remove_wp_ver_css_js( $src ) {
         $src = remove_query_arg( 'ver', $src );
     return $src;
 }
+add_filter( 'style_loader_src', 'remove_wp_ver_css_js', 9999 ); // remove WP version from css
+add_filter( 'script_loader_src', 'remove_wp_ver_css_js', 9999 ); // remove Wp version from scripts
 
 function disable_version() {
    return '';
 }
-
-add_filter( 'style_loader_src', 'remove_wp_ver_css_js', 9999 ); // remove WP version from css
-add_filter( 'script_loader_src', 'remove_wp_ver_css_js', 9999 ); // remove WP version from scripts
 add_filter('the_generator','disable_version');
 
 // Deregistering styles and scripts that might be in the wp core.
 // Registering all kinds of cool styles and scripts.
 function scripts_and_styles() {
-  global $wp_styles;
 
     wp_deregister_script('jquery');
     wp_deregister_style( 'functions-style-css');
@@ -61,14 +60,13 @@ function scripts_and_styles() {
     // register main stylesheets
     wp_register_style( 'stylesheet', get_stylesheet_directory_uri() . '/stylesheets/style.css', array(), '', 'all' );
 
-    wp_register_script( 'jquery', get_stylesheet_directory_uri() . '/js/jquery.min.js', array(), '', false );
-    // wp_register_script( 'html5-script', get_stylesheet_directory_uri() . '/js/html5.js', array( 'jquery' ), '', false );
-    wp_register_script( 'vv-script', get_stylesheet_directory_uri() . '/js/vv-script.js', array( 'jquery' ), '', false );
-
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
       wp_enqueue_script( 'comment-reply' );
     }
+    wp_register_script( 'jquery', get_stylesheet_directory_uri() . '/js/jquery.min.js', array(), '', false );
+    // wp_register_script( 'html5-script', get_stylesheet_directory_uri() . '/js/html5.js', array( 'jquery' ), '', false );
+    wp_register_script( 'vv-script', get_stylesheet_directory_uri() . '/js/vv-script.js', array( 'jquery' ), '', false );
 
     // enqueue styles and scripts
     wp_enqueue_style( 'stylesheet' );
@@ -86,6 +84,7 @@ function deregister_contact_form() {
 
 add_action('wp_enqueue_scripts', 'scripts_and_styles', 999);
 add_action( 'wp', 'deregister_contact_form');
+
 
 // This theme uses a custom image size for featured images, displayed on "standard" posts.
 add_theme_support( 'post-thumbnails' );
@@ -119,6 +118,7 @@ function vv_top_menu(){
     );
       wp_nav_menu( $topmenu );
   }
+
 
 // the main menu
 function vv_main_menu(){

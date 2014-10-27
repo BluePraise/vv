@@ -8,9 +8,8 @@ get_sidebar( );
 ?>
 
 <div class="content standard">
-  <?php if ( have_posts() ) : ?>
   <h1 class="pagetitle orange"><?php the_title(); ?></h1>
-   <?php while ( have_posts() ) : the_post();
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post();
         the_content();
         endwhile;
         else: ?>

@@ -1,33 +1,30 @@
 <?php
-/*
-* Template Name: Single Page
-*/
 get_header();
+get_sidebar();
 ?>
 
-<div class="content-sidebar widget-area" role="complementary">
-    <?php dynamic_sidebar( 'sidebar-single-post' ); ?>
-</div><!-- #content-sidebar -->
+<div class="content blue">
+  <article <?php post_class(); ?> >
+  <header class="article-header">
+    <h2 class="article-title"><?php the_title(); ?></h2>
+  </header>
 
-<div class="content">
+  <?php if ( ! post_password_required()) :
+    edit_post_link( __( 'Bewerk dit item', '' ), '<span class="edit-link">', '</span>' );
+    endif;
 
-<?php
-if ( have_posts() ) :
-  while ( have_posts() ) :
-    the_post();
-?>
-  <h2><?php the_title(); ?></h2>
-<?php
-  the_content();
-  if ( ! post_password_required()) :
-    edit_post_link( __( 'Edit', '' ), '<span class="edit-link">', '</span>' );
-  endif;
-  endwhile;
-?>
+    if (have_posts()) : while (have_posts()) : the_post();?>
+      <div class="article-image">
+        <?php the_post_thumbnail('artikel_large_view'); ?>
+      </div>
+      <div class="article-content"><?php the_content();?></div>
 
+  <?php comments_template(); ?>
+</article>
 
 </div> <!-- end of contentclass -->
 <?php
-endif;
+  endwhile;
+  endif;
 get_footer();
 ?>
