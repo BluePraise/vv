@@ -1,6 +1,6 @@
 <?php
 /*
-* Template Name: Activiteiten Page
+* Template Name: Calender Page
 */
 get_header();
 get_sidebar();

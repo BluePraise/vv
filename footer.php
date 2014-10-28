@@ -6,9 +6,7 @@
  * #main and #page div elements.
  */
 ?>
-</div><!-- #main -->
-
-    <footer id="colophon" class="site-footer purple" role="contentinfo">
+  <footer id="colophon" class="site-footer purple" role="contentinfo">
 
         <div class="footer-info links">
             <?php dynamic_sidebar( 'sidebar-footer-Links' ); ?>

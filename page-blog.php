@@ -47,7 +47,6 @@ get_sidebar('');
     </li>
   <?php
     endwhile; // End of the loop
-    wp_reset_query();
     wp_reset_postdata();
   ?>
 </ul>
